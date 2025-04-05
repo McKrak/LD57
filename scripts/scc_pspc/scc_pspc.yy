@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scc_pspc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scc_pspc",
+  "parent":{
+    "name":"PNode",
+    "path":"folders/Engine/RNode/PNode.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

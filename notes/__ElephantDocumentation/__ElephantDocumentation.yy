@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"",
+  "%Name":"__ElephantDocumentation",
+  "name":"__ElephantDocumentation",
+  "parent":{
+    "name":"Elephant",
+    "path":"folders/Engine/Extensions/Elephant.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scc_rmdl",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scc_rmdl",
+  "parent":{
+    "name":"RNode",
+    "path":"folders/Engine/RNode.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

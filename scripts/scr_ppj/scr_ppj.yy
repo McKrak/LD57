@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_ppj",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ppj",
+  "parent":{
+    "name":"System",
+    "path":"folders/Engine/RNode/System.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

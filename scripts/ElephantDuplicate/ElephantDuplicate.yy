@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ElephantDuplicate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ElephantDuplicate",
+  "parent":{
+    "name":"Elephant",
+    "path":"folders/Engine/Extensions/Elephant.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

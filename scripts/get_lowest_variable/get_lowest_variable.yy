@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_lowest_variable",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_lowest_variable",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/GlobalRes/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+obs_microsys.micro_result = result;

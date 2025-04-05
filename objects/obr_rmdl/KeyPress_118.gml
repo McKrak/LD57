@@ -1,0 +1,1 @@
+LoadAnimation($"Kahuna/Check/rigani.vbm");

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"vertex_format_create_simple",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vertex_format_create_simple",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/GlobalRes/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

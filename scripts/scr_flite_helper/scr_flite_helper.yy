@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_flite_helper",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_flite_helper",
+  "parent":{
+    "name":"Flite",
+    "path":"folders/Engine/Extensions/Flite.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

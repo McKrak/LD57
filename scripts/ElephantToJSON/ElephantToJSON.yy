@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ElephantToJSON",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ElephantToJSON",
+  "parent":{
+    "name":"Elephant",
+    "path":"folders/Engine/Extensions/Elephant.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

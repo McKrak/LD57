@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sprite_buffer_funcs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sprite_buffer_funcs",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/GlobalRes/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

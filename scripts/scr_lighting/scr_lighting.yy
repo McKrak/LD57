@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_lighting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_lighting",
+  "parent":{
+    "name":"3D",
+    "path":"folders/Engine/3D.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

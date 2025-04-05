@@ -1,0 +1,23 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"acu_button",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"hover","colour":4290799884,"name":"hover","points":[
+        {"th0":-0.25,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":1.0,},
+        {"th0":-0.19847327,"th1":0.25,"tv0":0.17333329,"tv1":0.0,"x":1.0,"y":1.25,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"unhover","colour":4278913983,"name":"unhover","points":[
+        {"th0":-0.25,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":1.25,},
+        {"th0":-0.2544392,"th1":0.14165363,"tv0":0.03029509,"tv1":-0.016866148,"x":0.3424808,"y":1.0167513,},
+        {"th0":-0.2,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"acu_button",
+  "parent":{
+    "name":"Common",
+    "path":"folders/GlobalRes/UI/Common.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

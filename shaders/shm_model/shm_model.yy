@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shm_model",
+  "name":"shm_model",
+  "parent":{
+    "name":"ModelShaders",
+    "path":"folders/Engine/3D/ModelShaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

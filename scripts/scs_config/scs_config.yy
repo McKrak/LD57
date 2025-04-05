@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scs_config",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scs_config",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"imgui_style",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"imgui_style",
+  "parent":{
+    "name":"System",
+    "path":"folders/Engine/RNode/System.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

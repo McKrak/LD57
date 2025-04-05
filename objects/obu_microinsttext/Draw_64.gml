@@ -1,0 +1,1 @@
+scribble($"[fa_middle][fa_center]{text}").transform(image_xscale,image_yscale,image_angle).blend(image_blend,image_alpha).draw(x,y);

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snu_select",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":1.110975,
+  "name":"snu_select",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/GlobalRes/Audio/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"snu_select.wav",
+  "type":0,
+  "volume":1.0,
+}

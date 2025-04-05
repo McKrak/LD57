@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scc_pcam",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scc_pcam",
+  "parent":{
+    "name":"PNode",
+    "path":"folders/Engine/RNode/PNode.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sequence_track_variable_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sequence_track_variable_set",
+  "parent":{
+    "name":"ExtendedSequenceScripts",
+    "path":"folders/Engine/Extensions/ExtendedSequenceScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

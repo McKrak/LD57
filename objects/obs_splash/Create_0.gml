@@ -1,0 +1,1 @@
+seq = layer_sequence_create(layer,0,0,sqv_opening);

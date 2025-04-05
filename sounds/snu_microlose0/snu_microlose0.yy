@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snu_microlose0",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.291247,
+  "name":"snu_microlose0",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/GlobalRes/Audio/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"snu_microlose0.wav",
+  "type":0,
+  "volume":1.0,
+}

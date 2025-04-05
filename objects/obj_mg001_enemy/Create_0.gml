@@ -1,0 +1,1 @@
+sprite_index = choose(spr_mg001_fish, spr_mg001_puff, spr_mg001_red, spr_mg001_sneaky);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sch_vec2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sch_vec2",
+  "parent":{
+    "name":"3D",
+    "path":"folders/Engine/3D.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

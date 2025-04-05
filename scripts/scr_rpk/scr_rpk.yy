@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_rpk",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_rpk",
+  "parent":{
+    "name":"System",
+    "path":"folders/Engine/RNode/System.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,10 @@
+{
+    "lang": "English",
+    "microgame_inst": {
+        "mg000": "Good luck on this one!",
+        "mg001": "Kill the enemies!",
+        "mg002": "Close the windows!",
+        "mg003": "Shake hands!",
+        "mg004": "Guide the lost!"
+    }
+}

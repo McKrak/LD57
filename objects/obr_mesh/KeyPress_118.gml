@@ -1,0 +1,1 @@
+LoadAnimation($"{ROOT_DIR}/Check/rigani.vbm");
