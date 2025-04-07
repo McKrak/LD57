@@ -20,6 +20,7 @@ state_hovered = function() {
     }
     if (instance_exists(obu_cursor)) {
         if !collision_point(obu_cursor.x,obu_cursor.y, self, false, false) state = state_idle;
+
     }
     
     t = clamp(t+0.00001*delta_time, 0, 1);

@@ -7,3 +7,6 @@ for (var i = 0; i < 20; i++) {
         is_fake: i == 0    
     });
 }
+
+timer_hovering = 35;
+ds_caught = ds_list_create();

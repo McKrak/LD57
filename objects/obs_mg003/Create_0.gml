@@ -1,6 +1,10 @@
 // Inherit the parent event
 event_inherited();
 
+if (nightmare) {
+    layer_background_index(layer_background_get_id("Background"), 1);
+}
+
 seq_handshake_intro = layer_sequence_create(layer,0,0,squ_handshake_intro);
 fx_blur = layer_get_fx("EF_BLUR");
 blurlevel = 0;

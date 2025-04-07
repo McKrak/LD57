@@ -13,5 +13,11 @@
         "mg009": "Refresh!",
         "mg010": "Finish the sentence!",
         "mg011": "Trim!"
+    },
+    "topmenu": {
+        "lifemode": "Dream Dash",
+        "timemode": "Speedy Sleep",
+        "freeplay": "Free Snooze",
+        "exit": "Wake Up (Quit)"
     }
 }

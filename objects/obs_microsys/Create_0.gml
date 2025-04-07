@@ -30,19 +30,23 @@ st_preinit = function() {
 st_init = function() {
     texturegroup_load("microstage00", true);
     if (texturegroup_get_status("microstage00") == texturegroup_status_fetched) {
-        state = st_intro;
         seq_microstage = layer_sequence_create(layer,0,0,sqb_microstage);
-        seq_microlife = layer_sequence_create(layer, 0, 0, sql_microstage_life);
+        var _reslife = asset_get_index($"sql_microstage_life_{life}");
+        if (sequence_exists(_reslife)) {
+            seq_microlife = layer_sequence_create(layer, 0, 0, _reslife);
+        }
+        state = st_intro;
     }
 }
 
 st_intro = function() {
+    
     state = st_microinit;
 }
 
 st_microinit = function() {
-    microgame = ++microgame mod 12;
-    //microgame = 11;
+    //microgame = ++microgame mod 12;
+    microgame = 6;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
     micro_str = format_int(microgame,3,0);
     texturegroup_load($"mg{micro_str}");
@@ -52,15 +56,28 @@ st_microinit = function() {
 
 st_microreturn = function() {
     seq_microstage = layer_sequence_create(layer,0,0,sqb_microstage);
-    seq_microlife = layer_sequence_create(layer, 0, 0, sql_microstage_life);
-    if (micro_result == MGR_WIN) audio_play_sound(snj_microwin,0,false);
-        else audio_play_sound(snj_microlose,0,false);
+    var _reslife = asset_get_index($"sql_microstage_life_{life}");
+    if (sequence_exists(_reslife)) {
+        seq_microlife = layer_sequence_create(layer, 0, 0, _reslife);
+    }
+    if (micro_result == MGR_WIN) {
+        audio_play_sound(snj_microwin,0,false);
+    } else {
+        audio_play_sound(snj_microlose,0,false);
+        life--;
+    }
     state = st_microresult;
 }
 
 st_microresult = function() {
     timer_microresult -= 1*sy.dt;
     if (timer_microresult < 0) {
+        if (micro_result == MGR_LOSE) {
+            var _inst = instance_find(obp_microstage_life,instance_number(obp_microstage_life)-1);
+            if (instance_exists(_inst)) {
+                with (_inst) kill();
+            }
+        }
         timer_microresult = 60;
         state = st_microinit;
     }
@@ -78,9 +95,9 @@ st_microwait = function () {
 }
 
 st_microprep = function() {
-    if (layer_sequence_get_headpos(seq_microprep) > 10) {
+    if (layer_sequence_get_headpos(seq_microprep) > 20) {
         if (instance_exists(obv_3dcam)) {
-            obv_3dcam.ortho_zoom = lerp(obv_3dcam.ortho_zoom, 5, .1*sy.dt);
+            obv_3dcam.ortho_zoom = lerp(obv_3dcam.ortho_zoom, 5, .025*sy.dt);
         }
     }
     if (layer_sequence_get_headpos(seq_microprep) > 30) {

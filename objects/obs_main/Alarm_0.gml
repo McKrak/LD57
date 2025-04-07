@@ -1,4 +1,9 @@
-var button1 = sequence_track_get(seqinst.activeTracks, "start");
-var button2 = sequence_track_get(seqinst.activeTracks, "option");
-button1.instanceID.text = "Start Game";
-button2.instanceID.text = "Options";
+var button1 = sequence_track_get(seqinst.activeTracks, "lifemode");
+var button2 = sequence_track_get(seqinst.activeTracks, "timemode");
+var button3 = sequence_track_get(seqinst.activeTracks, "freeplay");
+var button4 = sequence_track_get(seqinst.activeTracks, "exit");
+button1.instanceID.text = loc("topmenu.lifemode");
+button2.instanceID.text = loc("topmenu.timemode");
+button3.instanceID.text = loc("topmenu.freeplay");
+button4.instanceID.text = loc("topmenu.exit");
+button4.instanceID.action = act_exit;

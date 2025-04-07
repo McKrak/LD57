@@ -15,5 +15,6 @@ if (instance_exists(obs_microsys)) {
         layer_sequence_y(seq_life, y);
         layer_sequence_xscale(seq_life, image_xscale);
         layer_sequence_yscale(seq_life, image_yscale);
+        
     }
 }

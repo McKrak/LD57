@@ -22,6 +22,7 @@ if (instance_exists(_hover)) {
     _hover.state = _hover.state_hovered;
     if (mouse_check_button_pressed(mb_left)) {
         sfx_play(snu_select);
+        if (is_callable(_hover.action)) _hover.action();
     }
 }
 

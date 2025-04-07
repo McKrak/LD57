@@ -12,11 +12,11 @@ st_idle = function() {
 st_cut = function() {
     image_index = 1;
     xsp = lerp(xsp, 0, .01*sy.dt);
-    ysp = lerp(ysp, 5, .035*sy.dt);
+    ysp = lerp(ysp, 6, .1*sy.dt);
     x += xsp;
     y += ysp;
     
-    if y > 400 {
+    if y > 420 {
         instance_destroy();
     }
 }

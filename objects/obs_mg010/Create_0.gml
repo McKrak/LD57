@@ -16,6 +16,9 @@ typepos = 0;
 targetpos = 0;
 targetkey = "?";
 
+seq_typewriter = -1;
+seq_result = -1;
+
 
 
 
@@ -73,6 +76,7 @@ st_play = function() {
                     if (prompt == target) && (result == MGR_UNDECIDED) {
                         result = MGR_WIN
                         audio_play_sound(snf_typebell,0,0);
+                        seq_result = layer_sequence_create("Result", 0,0,squ_result);
                         state = st_finish;
                     }
                 } else if (result == MGR_UNDECIDED) {
