@@ -1,7 +1,7 @@
-if (state = st_init) {
+if (state == st_init) {
     draw_text(200,200,"LOADING");
 }
-if (state = st_microresult) {
+if (state == st_microresult) {
     var _result = "";
     if micro_result == MGR_WIN _result = "YOU WIN!!";
         else if micro_result == MGR_LOSE _result = "YOU LOSE!!";

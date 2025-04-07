@@ -1,1 +1,1 @@
-part_system_destroy(ps_trail);
+//part_system_destroy(ps_trail);

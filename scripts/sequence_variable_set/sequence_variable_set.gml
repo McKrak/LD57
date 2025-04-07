@@ -17,5 +17,5 @@ function sequence_variable_set(_sequence, _var, _value){
 		default : _varname = "name";
 	}
 	
-	return variable_struct_set(_sequence, _varname, _value);
+	variable_struct_set(_sequence, _varname, _value);
 }

@@ -5,4 +5,10 @@ result_prev = MGR_UNDECIDED;
 result = MGR_UNDECIDED;
 won = false;
 starttime = time;
-//window_mouse_set_locked(true);
+playingsound = undefined;
+if (!nightmare) && (instance_exists(obs_microsys)) {
+    nightmare = obs_microsys.difficulty;
+}
+if (audio_exists(micro_song)) {
+    playingsound = audio_play_sound(micro_song, 0,false);
+}

@@ -11,14 +11,17 @@ dt = delta_time/(277 + 7/9)/60;
 	//k_pause = gamepad_button_check_pressed(0, gp_start);
 //}
 
-if (os_browser == browser_not_a_browser) {
+if (os_browser != browser_not_a_browser) || (os_type == os_gxgames) {
+    global.win_width = browser_width;
+    global.win_height = browser_height;
+    window_set_size(global.win_width,global.win_height);
+} else {
     global.win_width = window_get_width(); 
     global.win_height = window_get_height();
-} else {
-	global.win_width = browser_width;
-	global.win_height = browser_height;
-	window_set_size(global.res_width,global.res_height);
 }
+
+
+
 //if (global.aspect_ratio_mode == AR_DYNAMIC) {
     global.res_width = global.win_width;
     global.res_height = global.win_height;

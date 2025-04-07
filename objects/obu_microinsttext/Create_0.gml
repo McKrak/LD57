@@ -1,0 +1,1 @@
+text = loc($"microgame_inst.mg{obs_microsys.micro_str}");

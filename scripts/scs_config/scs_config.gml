@@ -17,6 +17,8 @@
 #macro TEX_FILTER false
 
 global.config = os_get_config();
+global.lang = { };
+lang_set("enUS");
 
 global.ref_rate = 60;
 if (os_browser == browser_not_a_browser) {
@@ -68,6 +70,7 @@ application_surface_draw_enable(false);
 window_set_cursor(cr_none);
 
 scribble_font_set_default("fnt_main");
+
 
 
 

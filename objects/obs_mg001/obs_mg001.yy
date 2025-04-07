@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"obs_mg001",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"cursor_spr","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+  ],
   "parent":{
     "name":"mg001",
     "path":"folders/Game/MicroGame/mg001.yy",

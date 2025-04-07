@@ -60,6 +60,7 @@
     {"$GMObjectProperty":"v1","%Name":"align_x","filters":[],"listItems":[],"multiselect":false,"name":"align_x","rangeEnabled":true,"rangeMax":2.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"align_y","filters":[],"listItems":[],"multiselect":false,"name":"align_y","rangeEnabled":true,"rangeMax":2.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"aspect_ratio","filters":[],"listItems":[],"multiselect":false,"name":"aspect_ratio","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"AR_DYNAMIC","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"ortho_zoom","filters":[],"listItems":[],"multiselect":false,"name":"ortho_zoom","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

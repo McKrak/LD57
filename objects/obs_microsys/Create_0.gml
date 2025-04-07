@@ -6,12 +6,19 @@ life = 4;
 spd = 1;
 difficulty = 0;
 microgame = 0;
+micro_str = "";
 micro_result = MGR_UNDECIDED;
 
 seq_microstage = -1;
 seq_microprep = -1;
+seq_microlife = -1;
+seq_micropause = -1;
+seq_micropause_exit = -1;
 
-timer_microwait = 30;
+music = audio_play_sound(snm_nightamb,0,true);
+
+
+timer_microwait = 60;
 timer_microresult = 60;
 timer_microgame = 300;
 
@@ -25,15 +32,29 @@ st_init = function() {
     if (texturegroup_get_status("microstage00") == texturegroup_status_fetched) {
         state = st_intro;
         seq_microstage = layer_sequence_create(layer,0,0,sqb_microstage);
+        seq_microlife = layer_sequence_create(layer, 0, 0, sql_microstage_life);
     }
 }
 
 st_intro = function() {
+    state = st_microinit;
+}
+
+st_microinit = function() {
+    microgame = ++microgame mod 12;
+    //microgame = 11;
+    //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
+    micro_str = format_int(microgame,3,0);
+    texturegroup_load($"mg{micro_str}");
+    
     state = st_microwait;
 }
 
 st_microreturn = function() {
     seq_microstage = layer_sequence_create(layer,0,0,sqb_microstage);
+    seq_microlife = layer_sequence_create(layer, 0, 0, sql_microstage_life);
+    if (micro_result == MGR_WIN) audio_play_sound(snj_microwin,0,false);
+        else audio_play_sound(snj_microlose,0,false);
     state = st_microresult;
 }
 
@@ -41,26 +62,33 @@ st_microresult = function() {
     timer_microresult -= 1*sy.dt;
     if (timer_microresult < 0) {
         timer_microresult = 60;
-        state = st_microwait;
+        state = st_microinit;
     }
 }
 
 st_microwait = function () {
-    microgame = 3;//irandom_range(0,2);
-    texturegroup_load($"mg{format_int(microgame,3,0)}");
     timer_microwait -= 1*sy.dt;
     if (timer_microwait < 0) {
-        timer_microwait = 30;
+        timer_microwait = 60;
+        layer_sequence_destroy(seq_microstage);
+        seq_microstage = layer_sequence_create(layer, 0, 0, sqb_microstage_prep);
         seq_microprep = layer_sequence_create(layer, 0, 0, sql_microprep);
         state = st_microprep;
     }
 }
 
 st_microprep = function() {
+    if (layer_sequence_get_headpos(seq_microprep) > 10) {
+        if (instance_exists(obv_3dcam)) {
+            obv_3dcam.ortho_zoom = lerp(obv_3dcam.ortho_zoom, 5, .1*sy.dt);
+        }
+    }
     if (layer_sequence_get_headpos(seq_microprep) > 30) {
-        room_goto(asset_get_index($"rmz_mg{format_int(microgame,3,0)}"));
+        obv_3dcam.ortho_zoom = 1;
+        room_goto(asset_get_index($"rmz_mg{micro_str}"));
         layer_sequence_destroy(seq_microstage);
         layer_sequence_destroy(seq_microprep);
+        layer_sequence_destroy(seq_microlife);
         state = st_microstart;
     }
 }
@@ -77,6 +105,8 @@ st_microplay = function() {
             layer_sequence_destroy(seq_microprep);
         }  
     }
+    audio_pause_sound(music);
+    
     //timer_microgame -= 1*sy.dt;
     //if (timer_microgame < 0) {
         //timer_microgame = 300;
@@ -86,6 +116,8 @@ st_microplay = function() {
 
 st_microfinish = function() {
     room_goto(rmz_microstage);
+    texturegroup_unload($"mg{micro_str}");
+    audio_resume_sound(music);
     state = st_microreturn;
 }
 

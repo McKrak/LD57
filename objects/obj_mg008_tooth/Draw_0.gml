@@ -1,0 +1,1 @@
+if (!attached) draw_self();

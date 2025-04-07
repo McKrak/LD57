@@ -4,10 +4,14 @@
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obs_mg003",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"micro_song","path":"objects/obs_microgame/obs_microgame.yy",},"resource":{"name":"snm_shake","path":"sounds/snm_shake/snm_shake.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snm_shake",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"cursor_spr","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+  ],
   "parent":{
     "name":"mg003",
     "path":"folders/Game/MicroGame/mg003.yy",

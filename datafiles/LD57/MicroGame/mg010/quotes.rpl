@@ -1,0 +1,36 @@
+{
+    "quotes": [
+        {
+            "text":"to be, or ___ to be",
+            "fulltext": "to be, or not to be",
+            "redact": "not"
+        },
+        {
+            "text":"love ___, trust a few",
+            "fulltext":"love all, trust a few",
+            "redact": "all"
+        },
+        {
+            "text": "the best is ___ to come",
+            "fulltext": "the best is yet to come",
+            "redact": "yet"
+        }
+    ],
+    "nquotes": [
+        {
+            "text":"sell your soul to the _____",
+            "fulltext": "sell your soul to the devil",
+            "redact": "devil"
+        },
+        {
+            "text":"you have to _____ in blood",
+            "fulltext": "you have to write in blood",
+            "redact": "write"
+        },
+        {
+            "text": "the only way out is _____",
+            "fulltext": "the only way out is death",
+            "redact": "death"
+        }
+    ]
+}

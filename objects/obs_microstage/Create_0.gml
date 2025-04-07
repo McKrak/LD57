@@ -1,0 +1,1 @@
+//music = audio_play_sound(snm_nightamb,0,true);

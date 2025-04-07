@@ -1,0 +1,1 @@
+seq_life = layer_sequence_create(layer,x,y,squ_microstage_life);

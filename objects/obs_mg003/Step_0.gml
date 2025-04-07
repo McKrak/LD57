@@ -4,6 +4,9 @@ if (!obs_microsys.pause) {
             layer_sequence_play(seq_handshake_intro);
         }
     }
+    if (instance_exists(obu_cursor)) {
+        obu_cursor.image_index = 3;
+    }
     state();
 } else {
     if (layer_sequence_exists(layer,seq_handshake_intro)) {

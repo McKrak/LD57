@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snj_microlose",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":4.0,
+  "name":"snj_microlose",
+  "parent":{
+    "name":"JIN",
+    "path":"folders/GlobalRes/Audio/JIN.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snj_microlose.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -1101,9 +1101,7 @@ if (imgui_begin_mainmenubar()) {
 
 
 
-if (window_command_check(window_command_close)) {
-    modal_exit = true;
-}
+
 
 if (modal_exit) {
     imgui_open_popup("###modal_exit");

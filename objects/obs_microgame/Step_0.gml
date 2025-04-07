@@ -15,4 +15,12 @@ if (!obs_microsys.pause) {
             }
         }
     }
+    if (audio_exists(playingsound)) {
+        audio_resume_sound(playingsound);
+    }
+    
+} else {
+    if (audio_exists(playingsound)) {
+        audio_pause_sound(playingsound);
+    }
 }
