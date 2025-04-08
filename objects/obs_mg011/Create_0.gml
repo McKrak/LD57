@@ -25,7 +25,7 @@ if (!nightmare) {
     }
 }
 
-layer_sequence_speedscale(seq_scissors, spd+(1.25*nightmare));
+layer_sequence_speedscale(seq_scissors, spd/*+(1.25*nightmare)*/);
 
 
 

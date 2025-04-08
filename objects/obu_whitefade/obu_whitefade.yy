@@ -6,8 +6,8 @@
   "name":"obu_whitefade",
   "overriddenProperties":[],
   "parent":{
-    "name":"Intro",
-    "path":"folders/Game/Cutscenes/Intro.yy",
+    "name":"CommonObj",
+    "path":"folders/Game/CommonObj.yy",
   },
   "parentObjectId":null,
   "persistent":false,

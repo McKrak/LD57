@@ -1,0 +1,1 @@
+//if (obj_mg012_fire.state == obj_mg012_fire.st_move) instance_destroy();

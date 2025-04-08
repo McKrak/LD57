@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
   "%Name":"obu_blackfade",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obu_blackfade",
   "overriddenProperties":[],
   "parent":{
-    "name":"Intro",
-    "path":"folders/Game/Cutscenes/Intro.yy",
+    "name":"CommonObj",
+    "path":"folders/Game/CommonObj.yy",
   },
   "parentObjectId":null,
   "persistent":false,

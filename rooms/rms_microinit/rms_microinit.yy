@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rms_microinit",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rms_microinit/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,

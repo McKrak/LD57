@@ -17,7 +17,7 @@ st_fillteeth = function() {
         array_push(_tootharray, _inst);
     }
     _tootharray = array_shuffle(_tootharray);
-    var _fillteeth = 5;
+    var _fillteeth = 6;
     for (var i = 0; i < array_length(_tootharray); i++) {
         var _inst = _tootharray[i];
         if (i < _fillteeth) {

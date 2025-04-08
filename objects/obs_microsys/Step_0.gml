@@ -23,7 +23,7 @@ if (!pause) {
     }
     if (!window_mouse_get_locked()) window_mouse_set_locked(true);
         
-    if (keyboard_check_pressed(vk_escape)) {
+    if (keyboard_check_pressed(vk_enter)) {
         pause = !pause;
     }
     
@@ -51,7 +51,7 @@ if (!pause) {
         if (!layer_sequence_exists(layer, seq_micropause)) {
             seq_micropause = layer_sequence_create(layer, 0,0, sql_pause_enter);
         } else {
-            if (layer_sequence_is_finished(seq_micropause) && keyboard_check_pressed(vk_escape)) {
+            if (layer_sequence_is_finished(seq_micropause) && keyboard_check_pressed(vk_enter)) {
                 layer_sequence_destroy(seq_micropause);
                 seq_micropause_exit = layer_sequence_create(layer,0,0,sql_pause_exit);
             }

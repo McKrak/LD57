@@ -8,16 +8,19 @@
         "mg004": "Stack those ingredients!",
         "mg005": "Fit the right key!",
         "mg006": "Spot the faker!",
-        "mg007": "Guide the soul!",
+        "mg007": "Guide the lost!",
         "mg008": "Fill the teeth!",
         "mg009": "Refresh!",
         "mg010": "Finish the sentence!",
-        "mg011": "Trim!"
+        "mg011": "Trim!",
+        "mg012": "Take down the\nStatue of Liberty!",
+        "mg013": "Cover!"
     },
     "topmenu": {
         "lifemode": "Dream Dash",
         "timemode": "Speedy Sleep",
         "freeplay": "Free Snooze",
-        "exit": "Wake Up (Quit)"
+        "exit": "Wake Up (Quit)",
+        "play": "Go to Sleep (Play)"
     }
 }

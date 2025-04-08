@@ -26,7 +26,7 @@
         {"name":"g_GradientPosition2","type":0,"value":"0",},
         {"name":"g_GradientPosition2","type":0,"value":"0",},
         {"name":"g_GradientMode","type":0,"value":"0",},
-      ],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_bggrid","path":"sprites/spr_bggrid/spr_bggrid.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.25,"vtiled":true,"x":0,"y":0,},
+      ],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.25,"vtiled":true,"x":0,"y":0,},
   ],
   "name":"d_scn_main",
   "parent":{

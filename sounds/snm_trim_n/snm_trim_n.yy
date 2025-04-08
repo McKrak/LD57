@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snm_trim_n",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":5.0,
+  "name":"snm_trim_n",
+  "parent":{
+    "name":"MUS",
+    "path":"folders/GlobalRes/Audio/MUS.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snm_trim_n.ogg",
+  "type":0,
+  "volume":1.0,
+}
