@@ -10,9 +10,14 @@ if (!pause) {
             layer_sequence_play(seq_microstage);
         }
     }
-        if (layer_sequence_exists(layer, seq_microlife)) {
+    if (layer_sequence_exists(layer, seq_microlife)) {
         if (layer_sequence_is_paused(seq_microlife)) {
             layer_sequence_play(seq_microlife);
+        }
+    }
+    if (layer_sequence_exists(layer, seq_micronum)) {
+        if (layer_sequence_is_paused(seq_micronum)) {
+            layer_sequence_play(seq_micronum);
         }
     }
     
@@ -44,6 +49,11 @@ if (!pause) {
     if (layer_sequence_exists(layer, seq_microlife)) {
         if (!layer_sequence_is_paused(seq_microlife)) {
             layer_sequence_pause(seq_microlife);
+        }
+    }
+    if (layer_sequence_exists(layer, seq_micronum)) {
+        if (!layer_sequence_is_paused(seq_micronum)) {
+            layer_sequence_pause(seq_micronum);
         }
     }
     

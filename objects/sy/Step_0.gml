@@ -65,10 +65,16 @@ var _ui_size = min(global.res_width/NATIVE_W,global.res_height/NATIVE_H);
 	//display_set_gui_size(0,0);
 //}
 
-if (keyboard_check_pressed(vk_f10)) {
-    texturegroup_set_mode(true,!texdebug,spi_missing);
-    texdebug = !texdebug;
+if (global.config == "Debug") {
+    if (keyboard_check_pressed(vk_f10)) {
+        texturegroup_set_mode(true,!texdebug,spi_missing);
+        texdebug = !texdebug;
+    }
+    if (keyboard_check_pressed(vk_f12)) {
+        room_restart();
+    }
 }
+
 if (keyboard_check_pressed(vk_f11)) {
 	if (window_get_fullscreen() = false) {
 		window_set_fullscreen(true);
@@ -76,8 +82,5 @@ if (keyboard_check_pressed(vk_f11)) {
 	else {
 		window_set_fullscreen(false);
 	}
-}
-if (keyboard_check_pressed(vk_f12)) {
-    room_restart();
 }
 

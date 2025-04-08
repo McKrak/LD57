@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obu_whitefade",
+  "%Name":"obj_whitefade",
   "eventList":[],
   "managed":true,
-  "name":"obu_whitefade",
+  "name":"obj_whitefade",
   "overriddenProperties":[],
   "parent":{
     "name":"CommonObj",
     "path":"folders/Game/CommonObj.yy",
   },
-  "parentObjectId":{
-    "name":"GRP_UI",
-    "path":"objects/GRP_UI/GRP_UI.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

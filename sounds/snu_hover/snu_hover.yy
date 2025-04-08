@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.653968,
+  "duration":0.106327,
   "name":"snu_hover",
   "parent":{
     "name":"SFX",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":22050,
-  "soundFile":"snu_hover.wav",
+  "soundFile":"snu_hover.ogg",
   "type":0,
   "volume":1.0,
 }

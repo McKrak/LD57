@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.110975,
+  "duration":0.106327,
   "name":"snu_select",
   "parent":{
     "name":"SFX",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":22050,
-  "soundFile":"snu_select.wav",
+  "soundFile":"snu_select.ogg",
   "type":0,
   "volume":1.0,
 }

@@ -85,8 +85,8 @@
       ],"traits":0,},
     {"$GMInstanceTrack":"","%Name":"obu_whitefade","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<AssetInstanceKeyframe>":"","Keyframes":[
           {"$Keyframe<AssetInstanceKeyframe>":"","Channels":{
-              "0":{"$AssetInstanceKeyframe":"","Id":{"name":"obu_whitefade","path":"objects/obu_whitefade/obu_whitefade.yy",},"resourceType":"AssetInstanceKeyframe","resourceVersion":"2.0",},
-            },"Disabled":false,"id":"231aeef2-8582-4334-b9a1-9e6011f17c07","IsCreationKey":false,"Key":30.0,"Length":30.0,"resourceType":"Keyframe<AssetInstanceKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              "0":{"$AssetInstanceKeyframe":"","Id":{"name":"obj_whitefade","path":"objects/obj_whitefade/obj_whitefade.yy",},"resourceType":"AssetInstanceKeyframe","resourceVersion":"2.0",},
+            },"Disabled":false,"id":"1409aab4-aaa0-464c-be63-b0b0d40b309e","IsCreationKey":false,"Key":30.0,"Length":30.0,"resourceType":"Keyframe<AssetInstanceKeyframe>","resourceVersion":"2.0","Stretch":false,},
         ],"resourceType":"KeyframeStore<AssetInstanceKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"obu_whitefade","resourceType":"GMInstanceTrack","resourceVersion":"2.0","trackColour":4282967538,"tracks":[
         {"$GMColourTrack":"","%Name":"blend_multiply","builtinName":10,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<ColourKeyframe>":"","Keyframes":[
               {"$Keyframe<ColourKeyframe>":"","Channels":{

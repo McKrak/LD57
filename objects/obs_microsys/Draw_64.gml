@@ -1,5 +1,5 @@
 if (state == st_init) {
-    draw_text(200,200,"LOADING");
+    scribble($"[fa_middle][fa_center]LOADING").draw(320,180);
 }
 if (state == st_microresult) {
     var _result = "";
@@ -11,5 +11,5 @@ if (state == st_gameover_lose) {
     scribble($"[fa_middle][fa_center]GAME OVER").draw(320,180);
 }
 if (pause) {
-    draw_text(200,200,"PAUSE");
+    scribble($"[fa_middle][fa_center]PAUSED").draw(320,180);
 }

@@ -9,6 +9,7 @@ difficulty = 0;
 microgame = 0;
 micro_str = "";
 micro_result = MGR_UNDECIDED;
+micro_playtype = 0;
 micro_playlist_init = [2,3,4,5,6,8,9,10,11];
 micro_playlist_len = array_length(micro_playlist_init) + 1;
 micro_playlist = array_shuffle(micro_playlist_init);
