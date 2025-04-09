@@ -33,6 +33,9 @@ if (!obs_microsys.pause) {
                 y = lerp(y,prior_y,.1*sy.dt);
                 image_angle = lerp(image_angle,prior_angle,.1*sy.dt);
             }
+        } else if (obs_mg005.chosenkey == self) {
+            x = obj_mg005_gate.x;
+            y = obj_mg005_gate.y + 100;
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"squ_mg008_swap",
   "autoRecord":true,
   "backdropHeight":360,

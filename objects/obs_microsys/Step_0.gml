@@ -1,4 +1,9 @@
+
+
 if (!pause) {
+    if (!window_has_focus()) {
+        pause = true;
+    }
     audio_resume_sound(music);
     if (layer_sequence_exists(layer, seq_microprep)) {
         if (layer_sequence_is_paused(seq_microprep)) {
@@ -78,9 +83,4 @@ if (!pause) {
     }
     
     if (window_mouse_get_locked()) window_mouse_set_locked(false);
-}
-
-
-if (!window_has_focus()) {
-    pause = true;
 }

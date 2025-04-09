@@ -1,13 +1,12 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"LD57",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[
-      {"children":[],"name":"Release",},
-      {"children":[],"name":"Debug",},
+      {"children":[],"name":"NewConfig1",},
     ],
     "name":"Default",
   },
@@ -53,6 +52,7 @@
     {"$GMFolder":"","%Name":"Cutscenes","folderPath":"folders/Game/Cutscenes.yy","name":"Cutscenes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Intro","folderPath":"folders/Game/Cutscenes/Intro.yy","name":"Intro","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menus","folderPath":"folders/Game/Menus.yy","name":"Menus","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Loading","folderPath":"folders/Game/Menus/Loading.yy","name":"Loading","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Main","folderPath":"folders/Game/Menus/Main.yy","name":"Main","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"MicroSys","folderPath":"folders/Game/Menus/MicroSys.yy","name":"MicroSys","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"MicroGame","folderPath":"folders/Game/MicroGame.yy","name":"MicroGame","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -84,11 +84,13 @@
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/GlobalRes/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Common","folderPath":"folders/GlobalRes/UI/Common.yy","name":"Common","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"credits_in_this_file_cause_im_too_lazy_rn.txt","CopyToMask":-1,"filePath":"datafiles","name":"credits_in_this_file_cause_im_too_lazy_rn.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ppj.cpp","CopyToMask":-1,"filePath":"datafiles/Editor/ThemeData","name":"ppj.cpp","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"enUS.loc","CopyToMask":-1,"filePath":"datafiles/LD57/LanguageData","name":"enUS.loc","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"quotes.rpl","CopyToMask":-1,"filePath":"datafiles/LD57/MicroGame/mg010","name":"quotes.rpl","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"microstage00.rpl","CopyToMask":-1,"filePath":"datafiles/LD57/PlaylistData","name":"microstage00.rpl","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"scribble_license.txt","CopyToMask":-1,"filePath":"datafiles","name":"scribble_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -96,7 +98,7 @@
     {"name":"Trail","path":"particlelib/Trail/Trail.yy",},
   ],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.13.0.190",
   },
   "name":"LD57",
   "resources":[
@@ -409,6 +411,9 @@
     {"id":{"name":"sequence_variable_get","path":"scripts/sequence_variable_get/sequence_variable_get.yy",},},
     {"id":{"name":"sequence_variable_set","path":"scripts/sequence_variable_set/sequence_variable_set.yy",},},
     {"id":{"name":"sprite_buffer_funcs","path":"scripts/sprite_buffer_funcs/sprite_buffer_funcs.yy",},},
+    {"id":{"name":"sql_main_Events","path":"scripts/sql_main_Events/sql_main_Events.yy",},},
+    {"id":{"name":"sql_microstage_result_Events","path":"scripts/sql_microstage_result_Events/sql_microstage_result_Events.yy",},},
+    {"id":{"name":"squ_typewriter_Events","path":"scripts/squ_typewriter_Events/squ_typewriter_Events.yy",},},
     {"id":{"name":"src_audio","path":"scripts/src_audio/src_audio.yy",},},
     {"id":{"name":"string_height_scribble_ext","path":"scripts/string_height_scribble_ext/string_height_scribble_ext.yy",},},
     {"id":{"name":"string_height_scribble","path":"scripts/string_height_scribble/string_height_scribble.yy",},},
@@ -419,6 +424,7 @@
     {"id":{"name":"sqb_microstage_prep","path":"sequences/sqb_microstage_prep/sqb_microstage_prep.yy",},},
     {"id":{"name":"sqb_microstage","path":"sequences/sqb_microstage/sqb_microstage.yy",},},
     {"id":{"name":"sqj_mg002_window","path":"sequences/sqj_mg002_window/sqj_mg002_window.yy",},},
+    {"id":{"name":"sql_loading","path":"sequences/sql_loading/sql_loading.yy",},},
     {"id":{"name":"sql_main","path":"sequences/sql_main/sql_main.yy",},},
     {"id":{"name":"sql_microprep","path":"sequences/sql_microprep/sql_microprep.yy",},},
     {"id":{"name":"sql_microstage_life_1","path":"sequences/sql_microstage_life_1/sql_microstage_life_1.yy",},},
@@ -434,6 +440,7 @@
     {"id":{"name":"sqr_mg011_scissors","path":"sequences/sqr_mg011_scissors/sqr_mg011_scissors.yy",},},
     {"id":{"name":"sqr_mg011_win","path":"sequences/sqr_mg011_win/sqr_mg011_win.yy",},},
     {"id":{"name":"squ_handshake_intro","path":"sequences/squ_handshake_intro/squ_handshake_intro.yy",},},
+    {"id":{"name":"squ_mg005_keyring_1","path":"sequences/squ_mg005_keyring_1/squ_mg005_keyring_1.yy",},},
     {"id":{"name":"squ_mg005_keyring","path":"sequences/squ_mg005_keyring/squ_mg005_keyring.yy",},},
     {"id":{"name":"squ_mg008_swap","path":"sequences/squ_mg008_swap/squ_mg008_swap.yy",},},
     {"id":{"name":"squ_microstage_life","path":"sequences/squ_microstage_life/squ_microstage_life.yy",},},
@@ -545,6 +552,7 @@
     {"id":{"name":"spr_mg005_gate_prompt","path":"sprites/spr_mg005_gate_prompt/spr_mg005_gate_prompt.yy",},},
     {"id":{"name":"spr_mg005_gate_spit","path":"sprites/spr_mg005_gate_spit/spr_mg005_gate_spit.yy",},},
     {"id":{"name":"spr_mg005_gate","path":"sprites/spr_mg005_gate/spr_mg005_gate.yy",},},
+    {"id":{"name":"spr_mg005_indicator","path":"sprites/spr_mg005_indicator/spr_mg005_indicator.yy",},},
     {"id":{"name":"spr_mg005_key_base","path":"sprites/spr_mg005_key_base/spr_mg005_key_base.yy",},},
     {"id":{"name":"spr_mg005_key_tail","path":"sprites/spr_mg005_key_tail/spr_mg005_key_tail.yy",},},
     {"id":{"name":"spr_mg005_keyring","path":"sprites/spr_mg005_keyring/spr_mg005_keyring.yy",},},
@@ -649,71 +657,148 @@
   "templateType":null,
   "TextureGroups":[
     {"$GMTextureGroup":"","%Name":"Default","autocrop":false,"border":2,"compressFormat":"bz2","ConfigValues":{
-        "Debug":{
-          "groupParent":"null",
-          "compressFormat":"bz2",
-          "loadType":"default",
-        },
-        "Release":{
+        "NewConfig1":{
           "groupParent":"null",
           "compressFormat":"bz2",
           "loadType":"default",
         },
       },"customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"controller_glyphs","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{},"customOptions":"","directory":"Editor/TextureData/controller_glyphs","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"controller_glyphs","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"editor","autocrop":false,"border":2,"compressFormat":"bz2","ConfigValues":{},"customOptions":"","directory":"Editor/TextureData/editor","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"editor","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"ui_global","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{},"customOptions":"","directory":"LD57/TextureData/ui_global","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"ui_global","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"placeholder","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{},"customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"placeholder","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-9106278605694959855,},
-    {"$GMTextureGroup":"","%Name":"mg001","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{},"customOptions":"","directory":"LD57/MicroGame/mg001","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg001","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg002","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{},"customOptions":"","directory":"LD57/MicroGame/mg002","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg002","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"cutscene_opening","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
-        "Debug":{
+    {"$GMTextureGroup":"","%Name":"ui_global","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
           "groupParent":"null",
           "compressFormat":"bz2",
-          "loadType":"dynamicpages",
+          "loadType":"default",
+          "directory":"LD57/TextureData/ui_global",
         },
-        "Release":{
+      },"customOptions":"","directory":"LD57/TextureData/ui_global","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"ui_global","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"placeholder","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{},"customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"placeholder","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-9106278605694959855,},
+    {"$GMTextureGroup":"","%Name":"mg001","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
           "groupParent":"null",
           "compressFormat":"bz2",
-          "loadType":"dynamicpages",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg001",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg001","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg001","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg002","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg002",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg002","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg002","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"cutscene_opening","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/TextureData/cutscene_opening",
         },
       },"customOptions":"","directory":"LD57/TextureData/cutscene_opening","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"cutscene_opening","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg000","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg000","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg000","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"microstage00","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/TextureData/microstage00","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"microstage00","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg003","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg003","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg003","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg005","autocrop":false,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg005","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg005","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg004","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg004","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg004","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg006","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg006","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg006","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg008","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
-        "Release":{
+    {"$GMTextureGroup":"","%Name":"mg000","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
           "groupParent":"null",
           "compressFormat":"bz2",
-          "loadType":"dynamicpages",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg000",
         },
-        "Debug":{
+      },"customOptions":"","directory":"LD57/MicroGame/mg000","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg000","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"microstage00","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
           "groupParent":"null",
           "compressFormat":"bz2",
-          "loadType":"dynamicpages",
+          "loadType":"default",
+          "directory":"LD57/TextureData/microstage00",
+        },
+      },"customOptions":"","directory":"LD57/TextureData/microstage00","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"microstage00","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg003","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg003",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg003","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg003","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg005","autocrop":false,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg005",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg005","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg005","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg004","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg004",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg004","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg004","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg006","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg006",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg006","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg006","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg008","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg008",
         },
       },"customOptions":"","directory":"LD57/MicroGame/mg008","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg008","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"mg010","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
-        "Debug":{
+        "NewConfig1":{
           "groupParent":"null",
           "compressFormat":"bz2",
-          "loadType":"dynamicpages",
-          "directory":"LD57/MicroGame/mg010",
-        },
-        "Release":{
-          "groupParent":"null",
-          "compressFormat":"bz2",
-          "loadType":"dynamicpages",
+          "loadType":"default",
           "directory":"LD57/MicroGame/mg010",
         },
       },"customOptions":"","directory":"LD57/MicroGame/mg010","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg010","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg007","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg007","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg007","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg011","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg011","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg011","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg009","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg009","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg009","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"mg012","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/MicroGame/mg012","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg012","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"topmenu","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"LD57/TextureData/topmenu","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"topmenu","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg007","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg007",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg007","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg007","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg011","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg011",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg011","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg011","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg009","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg009",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg009","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg009","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"mg012","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/MicroGame/mg012",
+        },
+      },"customOptions":"","directory":"LD57/MicroGame/mg012","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"mg012","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"topmenu","autocrop":true,"border":2,"compressFormat":"bz2","ConfigValues":{
+        "NewConfig1":{
+          "groupParent":"null",
+          "compressFormat":"bz2",
+          "loadType":"default",
+          "directory":"LD57/TextureData/topmenu",
+        },
+      },"customOptions":"","directory":"LD57/TextureData/topmenu","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"topmenu","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }

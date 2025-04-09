@@ -46,17 +46,17 @@ typepos = string_pos_ext(targetkey,original,typepos);
 
 st_init = function() {
     seq_typewriter = layer_sequence_create(layer, 320,180,squ_typewriter);
-    seqinst_typewriter = layer_sequence_get_instance(seq_typewriter);
-    state = st_setupkeys;
+    //seqinst_typewriter = layer_sequence_get_instance(seq_typewriter);
+    state = st_play;
 }
 
 st_setupkeys = function() {
-    var _keys = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    for (var i = 0; i < array_length(_keys); i++) {
-            var _track = sequence_track_get(seqinst_typewriter.activeTracks, _keys[i]);
-            var _inst = _track.instanceID;
-            _inst.key = _keys[i];
-        }
+    //var _keys = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    //for (var i = 0; i < array_length(_keys); i++) {
+            //var _track = sequence_track_get(seqinst_typewriter.activeTracks, _keys[i]);
+            //var _inst = _track.instanceID;
+            //_inst.key = _keys[i];
+        //}
     state = st_play;
 }
 
@@ -71,7 +71,7 @@ st_play = function() {
                 displayquote = string_replace_all(quote, "_", " ");
                 if (_inst.key == targetkey) {
                     targetkey = string_char_at(target,++targetpos);
-                    typepos = string_pos_ext(targetkey,original,typepos);
+                    typepos = string_pos_ext(targetkey,original,typepos+1);
                     print(targetkey);
                     if (prompt == target) && (result == MGR_UNDECIDED) {
                         result = MGR_WIN
@@ -80,6 +80,8 @@ st_play = function() {
                         state = st_finish;
                     }
                 } else if (result == MGR_UNDECIDED) {
+                    targetkey = string_char_at(target,++targetpos);
+                    typepos = string_pos_ext(targetkey,original,typepos+1);
                     result = MGR_LOSE;
                     state = st_finish;
                 }

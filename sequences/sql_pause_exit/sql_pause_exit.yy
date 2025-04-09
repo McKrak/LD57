@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sql_pause_exit",
   "autoRecord":true,
   "backdropHeight":360,

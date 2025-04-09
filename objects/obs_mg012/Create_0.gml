@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-time_bullet_spawn = 240;
+time_bullet_spawn = 120;
 time_boss_clear = 180;
 timer_boss_clear = time_boss_clear;
 timer_bullet_spawn = time_bullet_spawn;
@@ -25,7 +25,7 @@ st_preboss = function() {
         for (var i = 0; i < _stage; i++) {
             instance_create_layer(_spawners[i].x,_spawners[i].y,"Bullets",obj_mg012_wall);
         }
-        time_bullet_spawn -= 20;
+        time_bullet_spawn -= 10;
         timer_bullet_spawn = time_bullet_spawn;
         if (time_bullet_spawn < 60) {
             state = st_boss_init;

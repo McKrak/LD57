@@ -3,7 +3,7 @@ timer_appear = time_appear;
 time_attack = 15;
 timer_attack = time_attack;
 light_offset = -304;
-hp = 30;
+hp = 25;
 boom_size = 0;
 boom_opacity = 1;
 time_hurt = 5;
@@ -28,7 +28,7 @@ st_attack_prepare = function() {
     y = lerp(y, ytarget,.1);
     if (timer_appear < 0) {
         ytarget = random_range(obs_mg012_bounds.bbox_top-light_offset,obs_mg012_bounds.bbox_bottom-light_offset);
-        timer_appear = time_appear/4;
+        timer_appear = time_appear/8;
         state = st_attack;
     }
 }

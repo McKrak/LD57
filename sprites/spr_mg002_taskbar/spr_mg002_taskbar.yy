@@ -8,11 +8,7 @@
   "bbox_top":5,
   "collisionKind":1,
   "collisionTolerance":0,
-  "ConfigValues":{
-    "Debug":{
-      "textureGroupId":"{ \"name\":\"mg002\", \"path\":\"texturegroups/mg002\" }",
-    },
-  },
+  "ConfigValues":{},
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
@@ -37,7 +33,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_mg002_taskbar",
     "autoRecord":true,
     "backdropHeight":768,
@@ -86,8 +82,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"mg002",
+    "path":"texturegroups/mg002",
   },
   "type":0,
   "VTile":false,

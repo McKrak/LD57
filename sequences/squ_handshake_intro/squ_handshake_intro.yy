@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"squ_handshake_intro",
   "autoRecord":true,
   "backdropHeight":360,

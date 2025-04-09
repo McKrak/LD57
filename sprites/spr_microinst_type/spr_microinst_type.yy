@@ -34,7 +34,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_microinst_type",
     "autoRecord":true,
     "backdropHeight":768,
@@ -65,6 +65,8 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
+    "seqHeight":542.0,
+    "seqWidth":420.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,
@@ -89,8 +91,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"microstage00",
+    "path":"texturegroups/microstage00",
   },
   "type":0,
   "VTile":false,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"squ_typewriter_Events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"squ_typewriter_Events",
+  "parent":{
+    "name":"mg010",
+    "path":"folders/Game/MicroGame/mg010.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

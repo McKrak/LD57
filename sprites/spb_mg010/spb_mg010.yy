@@ -8,14 +8,7 @@
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
-  "ConfigValues":{
-    "Debug":{
-      "textureGroupId":"{ \"name\":\"mg010\", \"path\":\"texturegroups/mg010\" }",
-    },
-    "Release":{
-      "textureGroupId":"{ \"name\":\"mg010\", \"path\":\"texturegroups/mg010\" }",
-    },
-  },
+  "ConfigValues":{},
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
@@ -41,7 +34,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spb_mg010",
     "autoRecord":true,
     "backdropHeight":768,

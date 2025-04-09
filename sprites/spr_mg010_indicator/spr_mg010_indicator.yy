@@ -8,14 +8,7 @@
   "bbox_top":70,
   "collisionKind":1,
   "collisionTolerance":0,
-  "ConfigValues":{
-    "Debug":{
-      "textureGroupId":"{ \"name\":\"mg010\", \"path\":\"texturegroups/mg010\" }",
-    },
-    "Release":{
-      "textureGroupId":"{ \"name\":\"mg010\", \"path\":\"texturegroups/mg010\" }",
-    },
-  },
+  "ConfigValues":{},
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
@@ -31,7 +24,7 @@
   ],
   "name":"spr_mg010_indicator",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"mg010",
     "path":"folders/Game/MicroGame/mg010.yy",
@@ -40,7 +33,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_mg010_indicator",
     "autoRecord":true,
     "backdropHeight":768,
@@ -71,6 +64,8 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
+    "seqHeight":266.0,
+    "seqWidth":302.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,
@@ -83,8 +78,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":152,
+    "yorigin":207,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

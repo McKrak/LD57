@@ -1,11 +1,7 @@
 {
   "$GMMainOptions":"v3",
   "%Name":"Main",
-  "ConfigValues":{
-    "Debug":{
-      "option_window_colour":"16777215",
-    },
-  },
+  "ConfigValues":{},
   "name":"Main",
   "option_audio_error_behaviour":true,
   "option_author":"",

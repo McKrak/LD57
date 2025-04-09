@@ -33,7 +33,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_mg003_lose",
     "autoRecord":true,
     "backdropHeight":768,
@@ -85,8 +85,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"mg003",
+    "path":"texturegroups/mg003",
   },
   "type":0,
   "VTile":false,

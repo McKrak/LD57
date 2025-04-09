@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sqb_microstage_prep",
   "autoRecord":true,
   "backdropHeight":360,
@@ -34,6 +34,8 @@
   "playbackSpeedType":0,
   "resourceType":"GMSequence",
   "resourceVersion":"2.0",
+  "seqHeight":1080.0,
+  "seqWidth":1920.0,
   "showBackdrop":true,
   "showBackdropImage":false,
   "spriteId":null,

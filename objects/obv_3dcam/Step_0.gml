@@ -31,7 +31,7 @@ if (surface_exists(output)) {
 
 
 if (is_3d) {
-	if (free_look) {	
+	if (free_look) && (global.config == "Debug") {	
 		var _cx = window_get_width()/2;
 		var _cy = window_get_height()/2;
 		var _mx = window_mouse_get_x();
@@ -73,7 +73,7 @@ if (is_3d) {
 	view_mat = matrix_build_lookat(x,y,z,xto,yto,zto, 0,0,1);
 	camera_set_view_mat(camera, view_mat);
 } else {
-	if (free_look) {	
+	if (free_look) && (global.config == "Debug") {	
 		if (keyboard_check(ord("A"))) {
 			x -= spd*sy.dt;
 		}

@@ -28,12 +28,12 @@ if (instance_exists(_hover)) {
 
 
 
-t = (t + (.000001*delta_time)) mod 1;
-if (!window_get_hover()) {
-    image_alpha = animcurve_channel_evaluate(ac_offscreen, t);
-} else { 
-    t = .5;
-    image_alpha = 1;
-    //part_particles_create(ps_trail, x,y, px_trail.emitters[0].ind, 1);
-}
+//t = (t + (.000001*delta_time)) mod 1;
+//if (!window_get_hover()) {
+    //image_alpha = animcurve_channel_evaluate(ac_offscreen, t);
+//} else { 
+    //t = .5;
+    //image_alpha = 1;
+    ////part_particles_create(ps_trail, x,y, px_trail.emitters[0].ind, 1);
+//}
 

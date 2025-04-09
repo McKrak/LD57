@@ -11,5 +11,7 @@ if (state == st_gameover_lose) {
     scribble($"[fa_middle][fa_center]GAME OVER").draw(320,180);
 }
 if (pause) {
+    layer = layer_get_id("UI_TOP");
     scribble($"[fa_middle][fa_center]PAUSED").draw(320,180);
+    layer = layer_get_id("Instances");
 }

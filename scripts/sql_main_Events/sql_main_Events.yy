@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sql_main_Events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sql_main_Events",
+  "parent":{
+    "name":"Main",
+    "path":"folders/Game/Menus/Main.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

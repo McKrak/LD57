@@ -8,11 +8,7 @@
   "bbox_top":34,
   "collisionKind":1,
   "collisionTolerance":0,
-  "ConfigValues":{
-    "Debug":{
-      "textureGroupId":"{ \"name\":\"placeholder\", \"path\":\"texturegroups/placeholder\" }",
-    },
-  },
+  "ConfigValues":{},
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
@@ -37,7 +33,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spu_microinsttext",
     "autoRecord":true,
     "backdropHeight":768,

@@ -13,7 +13,7 @@
         "mg009": "Refresh!",
         "mg010": "Finish the sentence!",
         "mg011": "Trim!",
-        "mg012": "Take down the\nStatue of Liberty!",
+        "mg012": "BOSS!\nTake down the Statue of Liberty!",
         "mg013": "Cover!"
     },
     "topmenu": {
@@ -22,5 +22,14 @@
         "freeplay": "Free Snooze",
         "exit": "Wake Up (Quit)",
         "play": "Go to Sleep (Play)"
-    }
+    },
+    "results": {
+        "retry": "Snooze",
+        "exit": "Wake Up"
+    },
+    "playstyle": [
+        "CLICK",
+        "DRAG",
+        "MOVE"
+    ]
 }

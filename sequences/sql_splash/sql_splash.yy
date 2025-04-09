@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sql_splash",
   "autoRecord":true,
   "backdropHeight":360,
@@ -34,6 +34,8 @@
   "playbackSpeedType":0,
   "resourceType":"GMSequence",
   "resourceVersion":"2.0",
+  "seqHeight":213.68141,
+  "seqWidth":23.199999,
   "showBackdrop":true,
   "showBackdropImage":false,
   "spriteId":null,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sql_microstage_result_Events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sql_microstage_result_Events",
+  "parent":{
+    "name":"MicroStage",
+    "path":"folders/Game/MicroStage.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

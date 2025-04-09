@@ -9,11 +9,11 @@ difficulty = 0;
 microgame = 0;
 micro_str = "";
 micro_result = MGR_UNDECIDED;
-micro_playtype = 0;
-micro_playlist_init = [2,3,4,5,6,8,9,10,11];
-micro_playlist_len = array_length(micro_playlist_init) + 1;
+micro_playstyle = 0;
+micro_playlist_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microstage00.rpl"));
+micro_playlist_init = [];
+micro_playlist_len = array_length(micro_playlist_init);
 micro_playlist = array_shuffle(micro_playlist_init);
-array_push(micro_playlist, 12);
 playlist_ind = 0;
 
 seq_microstage = -1;
@@ -25,6 +25,15 @@ seq_micropause_exit = -1;
 seq_results_fade = -1;
 seq_results = -1;
 seqinst_results = -1;
+
+init_playlist = function() {
+    
+    micro_playlist_init = micro_playlist_file.microlist;
+    micro_playlist_len = array_length(micro_playlist_init) + 1;
+    micro_playlist = array_shuffle(micro_playlist_init);
+    array_push(micro_playlist, micro_playlist_file.boss);
+    playlist_ind = 0;
+}
 
 music = audio_play_sound(snm_nightamb,0,true);
 
@@ -56,12 +65,10 @@ st_init = function() {
     layer_sequence_destroy(seq_microlife);
     layer_sequence_destroy(seq_results);
     layer_sequence_destroy(seq_results_fade);
-    micro_playlist_len = array_length(micro_playlist_init) + 1;
-    micro_playlist = array_shuffle(micro_playlist_init);
-    array_push(micro_playlist, 12);
+    init_playlist();
     
     texturegroup_load("microstage00", true);
-    if (texturegroup_get_status("microstage00") == texturegroup_status_fetched) {
+    if (texturegroup_get_status("microstage00") == texturegroup_status_fetched) || (os_get_config() == "NewConfig1"){
         seq_microstage = layer_sequence_create(layer,0,0,sqb_microstage);
         var _reslife = asset_get_index($"sql_microstage_life_{life}");
         if (sequence_exists(_reslife)) {
@@ -81,13 +88,12 @@ st_microinit = function() {
     //microgame = ++microgame mod 12;
     //microgame = 12;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
+    
     if (playlist_ind >= micro_playlist_len) {
-        micro_playlist_len = array_length(micro_playlist_init) + 1;
-        micro_playlist = array_shuffle(micro_playlist_init);
-        array_push(micro_playlist, 12);
-        playlist_ind = 0;
+        init_playlist();
     }
-    microgame = micro_playlist[playlist_ind];
+    microgame = micro_playlist[playlist_ind].index;
+    micro_playstyle = micro_playlist[playlist_ind].cont_type;
     playlist_ind++;
 
     
@@ -209,24 +215,13 @@ st_gameover_results_fade = function() {
 st_gameover_results_menu_init = function() {
     pause = false;
     if (layer_sequence_exists("UI_TOP", seq_results)) {
-        var _seq = layer_sequence_get_instance(seq_results);
-        var button1 = sequence_track_get(_seq.activeTracks, "retry");
-        var button2 = sequence_track_get(_seq.activeTracks, "exit");
-        button1.instanceID.text = "Snooze";
-        button1.instanceID.action = act_restart;
-        button2.instanceID.text = "Wake Up";
-        button2.instanceID.action = function() {
-            instance_destroy();
-            room_goto(rmz_microstage);
-            room_persistent = false;
-            room_goto(rmm_main);
-        }
         state = st_gameover_results;
     }
 }
 
 st_gameover_results = function() {
     pause = false;
+    window_mouse_set_locked(false);
 }
 
 act_restart = function() {

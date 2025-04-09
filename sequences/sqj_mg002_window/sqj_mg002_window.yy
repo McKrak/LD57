@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sqj_mg002_window",
   "autoRecord":true,
   "backdropHeight":64,

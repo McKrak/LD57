@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sqr_mg011_scissors",
   "autoRecord":true,
   "backdropHeight":360,

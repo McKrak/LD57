@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sql_pause_enter",
   "autoRecord":true,
   "backdropHeight":360,
@@ -34,6 +34,8 @@
   "playbackSpeedType":0,
   "resourceType":"GMSequence",
   "resourceVersion":"2.0",
+  "seqHeight":360.0,
+  "seqWidth":640.0,
   "showBackdrop":true,
   "showBackdropImage":false,
   "spriteId":null,

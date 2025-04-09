@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sql_microprep",
   "autoRecord":true,
   "backdropHeight":360,
@@ -34,6 +34,8 @@
   "playbackSpeedType":0,
   "resourceType":"GMSequence",
   "resourceVersion":"2.0",
+  "seqHeight":180.0,
+  "seqWidth":320.0,
   "showBackdrop":true,
   "showBackdropImage":false,
   "spriteId":null,

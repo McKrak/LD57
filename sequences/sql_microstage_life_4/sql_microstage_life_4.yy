@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"sql_microstage_life_4",
   "autoRecord":true,
   "backdropHeight":360,

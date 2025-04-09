@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"squ_microstage_life",
   "autoRecord":true,
   "backdropHeight":256,

@@ -35,7 +35,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spu_microtimer_number",
     "autoRecord":true,
     "backdropHeight":768,
@@ -93,8 +93,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"ui_global",
+    "path":"texturegroups/ui_global",
   },
   "type":0,
   "VTile":false,

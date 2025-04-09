@@ -16,7 +16,7 @@
 
 #macro TEX_FILTER false
 
-global.config = os_get_config();
+global.config = "Release";
 global.lang = { };
 lang_set("enUS");
 
@@ -41,6 +41,8 @@ global.res_change = false;
 global.mem = [[],[]];
 global.cur_mem = 1;
 
+global.loading = false;
+global.seq_loading = -1;
 
 
 

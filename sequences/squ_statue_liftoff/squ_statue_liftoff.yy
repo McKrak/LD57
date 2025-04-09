@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"squ_statue_liftoff",
   "autoRecord":true,
   "backdropHeight":300,
