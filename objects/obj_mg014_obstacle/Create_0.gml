@@ -1,0 +1,1 @@
+sprite_index = choose(spr_mg014_palm1, spr_mg014_palm2, spr_mg014_palm3);

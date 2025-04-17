@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sql_calibration_Events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sql_calibration_Events",
+  "parent":{
+    "name":"Calibration",
+    "path":"folders/Game/Menus/Calibration.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

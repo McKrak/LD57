@@ -48,6 +48,8 @@ st_play = function() {
 }
 
 st_lose = function() {
+    instance_destroy(obj_mg003_monke_hand);
+    instance_destroy(obj_mg003_fuzzy_hand);
     obv_3dcam.ortho_zoom = 1;
     obv_3dcam.x = 0;
     obv_3dcam.y = 0;

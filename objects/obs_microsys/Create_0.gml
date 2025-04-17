@@ -25,6 +25,7 @@ seq_micropause_exit = -1;
 seq_results_fade = -1;
 seq_results = -1;
 seqinst_results = -1;
+seq_micropause_prompt = -1;
 
 init_playlist = function() {
     
@@ -65,6 +66,9 @@ st_init = function() {
     layer_sequence_destroy(seq_microlife);
     layer_sequence_destroy(seq_results);
     layer_sequence_destroy(seq_results_fade);
+    if (!layer_sequence_exists(layer, seq_micropause_prompt)) {
+        seq_micropause_prompt = layer_sequence_create(layer, 0,0, sql_pause_prompt);
+    }
     init_playlist();
     
     texturegroup_load("microstage00", true);
@@ -86,15 +90,15 @@ st_intro = function() {
 
 st_microinit = function() {
     //microgame = ++microgame mod 12;
-    //microgame = 12;
+    microgame = 14;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
     
-    if (playlist_ind >= micro_playlist_len) {
-        init_playlist();
-    }
-    microgame = micro_playlist[playlist_ind].index;
-    micro_playstyle = micro_playlist[playlist_ind].cont_type;
-    playlist_ind++;
+    //if (playlist_ind >= micro_playlist_len) {
+        //init_playlist();
+    //}
+    //microgame = micro_playlist[playlist_ind].index;
+    //micro_playstyle = micro_playlist[playlist_ind].cont_type;
+    //playlist_ind++;
 
     
     micro_str = format_int(microgame,3,0);
@@ -104,6 +108,10 @@ st_microinit = function() {
 }
 
 st_microreturn = function() {
+    if (!layer_sequence_exists(layer, seq_micropause_prompt)) {
+        seq_micropause_prompt = layer_sequence_create(layer, 0,0, sql_pause_prompt);
+    }
+    layer_sequence_headpos(seq_micropause_prompt,25);
     seq_microstage = layer_sequence_create(layer,0,0,sqb_microstage);
     var _reslife = asset_get_index($"sql_microstage_life_{life}");
     if (sequence_exists(_reslife)) {
@@ -157,6 +165,7 @@ st_microprep = function() {
     if (layer_sequence_get_headpos(seq_microprep) > 30) {
         obv_3dcam.ortho_zoom = 1;
         room_goto(asset_get_index($"rmz_mg{micro_str}"));
+        layer_sequence_destroy(seq_micropause_prompt);
         layer_sequence_destroy(seq_microstage);
         layer_sequence_destroy(seq_microprep);
         layer_sequence_destroy(seq_microlife);
@@ -168,6 +177,10 @@ st_microprep = function() {
 st_microstart = function() {
     seq_microprep = layer_sequence_create(layer, 0, 0, sql_microprep);
     layer_sequence_headpos(seq_microprep,30);
+    if (!layer_sequence_exists(layer, seq_micropause_prompt)) {
+        seq_micropause_prompt = layer_sequence_create(layer, 0,0, sql_pause_prompt);
+    }
+    layer_sequence_headpos(seq_micropause_prompt,25);
     state = st_microplay;
 }
 
@@ -196,6 +209,9 @@ st_microfinish = function() {
 
 st_gameover_lose = function() {
     pause = false;
+    if (layer_sequence_exists(layer,seq_micropause_prompt)) {
+        layer_sequence_destroy(seq_micropause_prompt);
+    }
     timer_gameover_wait -= 1*sy.dt;
     if (timer_gameover_wait < 0) {
         seq_results_fade = layer_sequence_create(layer,0,0,sql_microstage_result_fade);

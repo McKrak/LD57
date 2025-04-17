@@ -1,4 +1,9 @@
-
+if (layer_sequence_exists(layer, seq_micropause_prompt)) {
+    if (layer_sequence_get_headpos(seq_micropause_prompt) >= 25) {
+        layer_sequence_pause(seq_micropause_prompt);
+        layer_sequence_headpos(seq_micropause_prompt, 25);
+    }
+}
 
 if (!pause) {
     if (!window_has_focus()) {
