@@ -23,7 +23,7 @@
   ],
   "name":"spp_mg016_strike",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"mg016",
     "path":"folders/Game/MicroGame/mg016.yy",
@@ -78,7 +78,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":225,
-    "yorigin":148,
+    "yorigin":74,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

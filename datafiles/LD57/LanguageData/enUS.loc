@@ -17,7 +17,11 @@
         "mg012": "BOSS!\nTake down the Statue of Liberty!",
         "mg013": "Cover!",
         "mg014": "Jump over the obstacles!",
-        "mg015": "Reject the call!"
+        "mg015": "Reject the call!",
+        "mg016": "Skewer the veggies!",
+        "mg017": "Fill the shapes!",
+        "mg018": "Remember!",
+        "mg018sub": "Copy the moves!"
     },
     "topmenu": {
         "lifemode": "Dream Dash",
