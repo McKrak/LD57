@@ -1,11 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"obs_mg007",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obs_mg007",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"autowin","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"autowin","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"time","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"480",},
   ],
   "parent":{
     "name":"mg007",

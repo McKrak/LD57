@@ -36,6 +36,8 @@ global.res_ratio_height = max(_h_factor/_w_factor,1);
 global.aspect_ratio_mode = AR_169;
 global.dpi_scale = display_get_dpi_y()/96;
 
+global.surf_ui = -1;
+
 global.res_change = false;
 
 global.mem = [[],[]];

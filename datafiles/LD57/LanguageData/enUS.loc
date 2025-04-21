@@ -15,7 +15,9 @@
         "mg010": "Finish the sentence!",
         "mg011": "Trim!",
         "mg012": "BOSS!\nTake down the Statue of Liberty!",
-        "mg013": "Cover!"
+        "mg013": "Cover!",
+        "mg014": "Jump over the obstacles!",
+        "mg015": "Reject the call!"
     },
     "topmenu": {
         "lifemode": "Dream Dash",

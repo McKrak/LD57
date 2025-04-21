@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Menus",
-    "path":"folders/Game/Menus.yy",
+    "name":"Loading",
+    "path":"folders/Game/Menus/Loading.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

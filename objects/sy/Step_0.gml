@@ -48,17 +48,27 @@ try {
     && ((global.res_width > 0) && (global.res_height > 0)) {
 		global.res_change = true;
 		surface_resize(application_surface, global.res_width, global.res_height);
+        
 	}
 } catch(_) {
 	
 }
 
-var _ui_size = min(global.res_width/NATIVE_W,global.res_height/NATIVE_H);
-//if (global.aspect_ratio_mode == AR_DYNAMIC) { 
-    display_set_gui_maximize(_ui_size,_ui_size,global.res_width/2-320*_ui_size,global.res_height/2-180*_ui_size);
-//} else {
-    //display_set_gui_maximize(_ui_size, _ui_size, 0,0)
+//if (!surface_exists(surf_ui)) || (global.res_change) {
+    //if (global.res_width > 0) && (global.res_height > 0) {
+        //if (!surface_exists(surf_ui)) {
+            //surf_ui = surface_create(global.res_width,global.res_height);
+        //} else {
+            //surface_resize(surf_ui,global.res_width,global.res_height);
+        //}
+    //}
 //}
+camera_set_view_size(cam_ui,NATIVE_W*global.res_ratio_width,NATIVE_H*global.res_ratio_height);
+camera_set_view_pos(cam_ui, (NATIVE_W-(NATIVE_W*global.res_ratio_width))/2, (NATIVE_H-(NATIVE_H*global.res_ratio_height))/2)
+
+var _ui_size = min(global.res_width/NATIVE_W,global.res_height/NATIVE_H);
+display_set_gui_maximize(_ui_size,_ui_size,global.res_width/2-320*_ui_size,global.res_height/2-180*_ui_size);
+
 
 ////DEBUG: Hide the GUI if needed.
 //if (keyboard_check(ord("H"))) { 

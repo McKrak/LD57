@@ -1,10 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obu_micropause_bg",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obu_micropause_bg",
   "overriddenProperties":[],
@@ -12,7 +9,10 @@
     "name":"MicroSys",
     "path":"folders/Game/Menus/MicroSys.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"GRP_UI",
+    "path":"objects/GRP_UI/GRP_UI.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

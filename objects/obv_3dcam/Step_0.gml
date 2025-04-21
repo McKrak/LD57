@@ -16,6 +16,12 @@ if (use_global_resolution) {
 	res_ratio_height = res_height/res_width;
 }
 
+if (!surface_exists(output)) {
+        if (res_width*output_xscale > 0) && (res_height*output_yscale > 0) {
+            output = surface_create(res_width*output_xscale, res_height*output_yscale);
+            view_surface_id[view] = output;
+        }
+    }
 if (surface_exists(output)) {
     view_visible[view] = true;
     room_set_view_enabled(room,view);
@@ -63,10 +69,10 @@ if (is_3d) {
 			y += dsin(look_dir)*spd*_dt;
 		}
 		z += (keyboard_check(ord("E")) - keyboard_check(ord("Q")))*spd*_dt;
+        xto = x + dcos(look_dir);
+    	yto = y - dsin(look_dir);
+    	zto = z - dtan(look_pitch);
 	}
-	xto = x + dcos(look_dir);
-	yto = y - dsin(look_dir);
-	zto = z - dtan(look_pitch);
 		
 	proj_mat = matrix_build_projection_perspective_fov(-60, -res_width/res_height, 3, draw_distance_far);
 	camera_set_proj_mat(camera, proj_mat);

@@ -17,8 +17,8 @@
   ],
   "name":"rmm_loading_main",
   "parent":{
-    "name":"Menus",
-    "path":"folders/Game/Menus.yy",
+    "name":"Loading",
+    "path":"folders/Game/Menus/Loading.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

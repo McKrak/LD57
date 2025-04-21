@@ -8,8 +8,8 @@
   "name":"obu_loading",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menus",
-    "path":"folders/Game/Menus.yy",
+    "name":"Loading",
+    "path":"folders/Game/Menus/Loading.yy",
   },
   "parentObjectId":null,
   "persistent":false,

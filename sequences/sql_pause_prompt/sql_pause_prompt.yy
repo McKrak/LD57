@@ -26,8 +26,8 @@
   },
   "name":"sql_pause_prompt",
   "parent":{
-    "name":"Menus",
-    "path":"folders/Game/Menus.yy",
+    "name":"MicroSys",
+    "path":"folders/Game/Menus/MicroSys.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,

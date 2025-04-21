@@ -7,7 +7,10 @@
   ],
   "managed":true,
   "name":"obs_mg014",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"autowin","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"time","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"480",},
+  ],
   "parent":{
     "name":"mg014",
     "path":"folders/Game/MicroGame/mg014.yy",

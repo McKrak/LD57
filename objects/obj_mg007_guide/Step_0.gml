@@ -1,4 +1,4 @@
-if (instance_exists(obv_mg007_cam) && instance_exists(obs_microsys)) {
+if (instance_exists(obs_microsys)) {
     if (!obs_microsys.pause) {
         xsp += window_mouse_get_delta_x()/8;
         ysp += window_mouse_get_delta_y()/8;

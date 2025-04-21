@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sql_pause_enter_Events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sql_pause_enter_Events",
+  "parent":{
+    "name":"MicroSys",
+    "path":"folders/Game/Menus/MicroSys.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
