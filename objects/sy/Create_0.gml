@@ -18,7 +18,7 @@ dt = delta_time/1000000;
 gpu_set_zwriteenable(true);//Enables writing to the z-buffer
 
 //gpu_set_ztestenable(true);//Enables depth testing, so far away things are drawn beind closer things
-layer_force_draw_depth(true, 0);
+
 
 	//view_set_wport(0,1280);
 	//view_set_hport(0,180);

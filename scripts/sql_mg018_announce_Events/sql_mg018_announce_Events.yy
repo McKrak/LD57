@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sql_mg018_announce_Events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sql_mg018_announce_Events",
+  "parent":{
+    "name":"mg018",
+    "path":"folders/Game/MicroGame/mg018.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

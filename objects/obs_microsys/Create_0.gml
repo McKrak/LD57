@@ -90,7 +90,7 @@ st_intro = function() {
 
 st_microinit = function() {
     //microgame = ++microgame mod 12;
-    microgame = 16;
+    microgame = 18;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
     
     //if (playlist_ind >= micro_playlist_len) {
