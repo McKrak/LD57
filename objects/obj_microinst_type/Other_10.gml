@@ -1,5 +1,4 @@
-if (instance_exists(obs_microsys)) {
-    if (!obs_microsys.pause) {
+
         draw_self();
         draw_sprite_ext(spr_microinst_type,inst,x,y,.4*image_xscale,.2*image_yscale,0,image_blend,image_alpha);
         scribble($"[fa_middle][fa_center]{text}")
@@ -8,5 +7,3 @@ if (instance_exists(obs_microsys)) {
             .sdf_outline(c_black,1*global.min_scale)
             .gradient(c_blue,.25)
             .draw(x,y+48);
-    }
-}

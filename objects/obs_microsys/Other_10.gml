@@ -1,3 +1,9 @@
+scribble($"[fa_middle][fa_center]TESTDRAW")
+            .blend(image_blend,image_alpha)
+            .sdf_outline(c_black,1*global.min_scale)
+            .gradient(c_blue,.25)
+            .draw(320,180);
+
 if (state == st_init) {
     scribble($"[fa_middle][fa_center]LOADING").draw(320,180);
 }
