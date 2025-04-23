@@ -10,7 +10,7 @@ if (!pause) {
         pause = true;
     }
     audio_resume_sound(music);
-    if (layer_sequence_exists(layer, seq_microprep)) {
+    if (layer_sequence_exists("SYS", seq_microprep)) {
         if (layer_sequence_is_paused(seq_microprep)) {
             layer_sequence_play(seq_microprep);
         }
@@ -46,7 +46,7 @@ if (!pause) {
     
 } else {
     audio_pause_sound(music);
-    if (layer_sequence_exists(layer, seq_microprep)) {
+    if (layer_sequence_exists("SYS", seq_microprep)) {
         if (!layer_sequence_is_paused(seq_microprep)) {
             layer_sequence_pause(seq_microprep);
         }

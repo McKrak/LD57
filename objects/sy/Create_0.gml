@@ -75,8 +75,19 @@ p3in = false;
 p4in = false;
 
 uiScale = 1;
+surf_ui = -1;
+surf_view = -1;
 
 texdebug = false;
+
+        fc_x = 0;
+        fc_y = 0;
+        fc_z = -32000;
+        fc_xto = 0;
+        fc_yto = 1;
+        fc_zto = 32000;
+        look_dir = 0;
+        look_pitch = 0;
 
 
 //show_debug_overlay(true);

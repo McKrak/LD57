@@ -151,7 +151,7 @@ st_microwait = function () {
         timer_microwait = 60;
         layer_sequence_destroy(seq_microstage);
         seq_microstage = layer_sequence_create(layer, 0, 0, sqb_microstage_prep);
-        seq_microprep = layer_sequence_create(layer, 0, 0, sql_microprep);
+        seq_microprep = layer_sequence_create("SYS", 0, 0, sql_microprep);
         state = st_microprep;
     }
 }
@@ -175,7 +175,7 @@ st_microprep = function() {
 }
 
 st_microstart = function() {
-    seq_microprep = layer_sequence_create(layer, 0, 0, sql_microprep);
+    seq_microprep = layer_sequence_create("SYS", 0, 0, sql_microprep);
     layer_sequence_headpos(seq_microprep,30);
     if (!layer_sequence_exists(layer, seq_micropause_prompt)) {
         seq_micropause_prompt = layer_sequence_create(layer, 0,0, sql_pause_prompt);
@@ -185,7 +185,7 @@ st_microstart = function() {
 }
 
 st_microplay = function() {
-    if (layer_sequence_exists(layer,seq_microprep)) {
+    if (layer_sequence_exists("SYS",seq_microprep)) {
         if (layer_sequence_is_finished(seq_microprep)) {
             layer_sequence_destroy(seq_microprep);
         }  

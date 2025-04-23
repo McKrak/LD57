@@ -50,8 +50,8 @@ st_cat_move = function() {
                 obj_mg018_cat.sprite_index = spr_mg018_cat_idle;
                 obj_mg018_cat.image_index = 0;
             }
-            if (!layer_sequence_exists("UI", seq_announce)) {
-                seq_announce = layer_sequence_create("UI",0,0,sql_mg018_announce);
+            if (!layer_sequence_exists("SYS", seq_announce)) {
+                seq_announce = layer_sequence_create("SYS",0,0,sql_mg018_announce);
             }
             state = st_monke_move;
         }

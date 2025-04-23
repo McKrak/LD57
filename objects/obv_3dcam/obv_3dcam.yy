@@ -18,10 +18,7 @@
     "name":"3D",
     "path":"folders/Engine/3D.yy",
   },
-  "parentObjectId":{
-    "name":"GRP_UI",
-    "path":"objects/GRP_UI/GRP_UI.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
