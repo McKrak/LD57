@@ -241,6 +241,7 @@
     {"name":"rmz_mg014","order":8,"path":"rooms/rmz_mg014/rmz_mg014.yy",},
     {"name":"rmz_mg015","order":1,"path":"rooms/rmz_mg015/rmz_mg015.yy",},
     {"name":"rmz_mg018","order":14,"path":"rooms/rmz_mg018/rmz_mg018.yy",},
+    {"name":"rmz_microgame","order":5,"path":"rooms/rmz_microgame/rmz_microgame.yy",},
     {"name":"__ElephantConfig","order":2,"path":"scripts/__ElephantConfig/__ElephantConfig.yy",},
     {"name":"__ElephantConstants","order":3,"path":"scripts/__ElephantConstants/__ElephantConstants.yy",},
     {"name":"__ElephantError","order":1,"path":"scripts/__ElephantError/__ElephantError.yy",},

@@ -67,7 +67,7 @@ texturegroup_set_mode(true,false,spi_missing);
 texturegroup_load("ui_global",true);
 //texturegroup_load("font_res",true);
 game_set_speed(60, gamespeed_fps);
-//gpu_set_zwriteenable(true);//Enables writing to the z-buffer
+gpu_set_zwriteenable(true);//Enables writing to the z-buffer
 gpu_set_ztestenable(true);//Enables depth testing, so far away things are drawn beind closer things
 //layer_force_draw_depth(true, 0);
 application_surface_enable(true);

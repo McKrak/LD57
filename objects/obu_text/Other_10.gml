@@ -3,4 +3,5 @@ scribble($"[fa_middle][fa_center]{text}")
 .blend(image_blend,image_alpha)
 .sdf_outline(c_black,1*global.min_scale)
 .scale(scale)
+.z(depth)
 .draw(x,y);

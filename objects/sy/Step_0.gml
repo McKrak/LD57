@@ -74,8 +74,12 @@ if (!surface_exists(surf_view)) || (global.res_change) {
     }
 }
 
-camera_set_proj_mat(cam_ui, matrix_build_projection_ortho(NATIVE_W*global.res_ratio_width,NATIVE_H*global.res_ratio_height,0.3,32000));
-camera_set_view_mat(cam_ui,matrix_build_lookat(fc_x,fc_y,fc_z,fc_xto,fc_yto,fc_zto,0,0,-1));
+//camera_set_proj_mat(cam_ui, matrix_build_projection_ortho(NATIVE_W*global.res_ratio_width,NATIVE_H*global.res_ratio_height,0.3,32000));
+//camera_set_view_mat(cam_ui,matrix_build_lookat(fc_x,fc_y,fc_z,fc_xto,fc_yto,fc_zto,0,0,1));
+
+camera_set_proj_mat(cam_ui, matrix_build_projection_perspective_fov(60, global.res_width/global.res_height, 3, 32000));
+camera_set_view_mat(cam_ui,matrix_build_lookat(fc_x,fc_y,fc_z,fc_xto,fc_yto,fc_zto,0,0,1));
+
 //camera_set_view_size(cam_ui,NATIVE_W*global.res_ratio_width,NATIVE_H*global.res_ratio_height);
 //camera_set_view_pos(cam_ui, (NATIVE_W-(NATIVE_W*global.res_ratio_width))/2, (NATIVE_H-(NATIVE_H*global.res_ratio_height))/2);
 

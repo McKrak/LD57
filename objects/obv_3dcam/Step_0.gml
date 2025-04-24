@@ -45,7 +45,7 @@ if (is_3d) {
 
 		if (mouse_check_button(mb_right)) {
 			look_dir -= (_mx - _cx)/10;
-			look_pitch += (_my - _cy)/10;
+			look_pitch -= (_my - _cy)/10;
 			look_pitch = clamp(look_pitch,-90,90);
 			window_mouse_set(_cx,_cy);
 		}
@@ -68,13 +68,13 @@ if (is_3d) {
 			x -= dcos(look_dir)*spd*_dt;
 			y += dsin(look_dir)*spd*_dt;
 		}
-		z += (keyboard_check(ord("E")) - keyboard_check(ord("Q")))*spd*_dt;
+		z -= (keyboard_check(ord("E")) - keyboard_check(ord("Q")))*spd*_dt;
         xto = x + dcos(look_dir);
     	yto = y - dsin(look_dir);
     	zto = z - dtan(look_pitch);
 	}
 		
-	proj_mat = matrix_build_projection_perspective_fov(-60, -res_width/res_height, 3, draw_distance_far);
+	proj_mat = matrix_build_projection_perspective_fov(60, res_width/res_height, 3, draw_distance_far);
 	camera_set_proj_mat(camera, proj_mat);
 	view_mat = matrix_build_lookat(x,y,z,xto,yto,zto, 0,0,1);
 	camera_set_view_mat(camera, view_mat);

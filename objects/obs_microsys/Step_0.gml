@@ -67,13 +67,13 @@ if (!pause) {
         }
     }
     
-    if (!layer_sequence_exists(layer,seq_micropause_exit)) {
-        if (!layer_sequence_exists(layer, seq_micropause)) {
-            seq_micropause = layer_sequence_create(layer, 0,0, sql_pause_enter);
+    if (!layer_sequence_exists("UI_TOP",seq_micropause_exit)) {
+        if (!layer_sequence_exists("UI_TOP", seq_micropause)) {
+            seq_micropause = layer_sequence_create("UI_TOP", 0,0, sql_pause_enter);
         } else {
             if (layer_sequence_is_finished(seq_micropause) && keyboard_check_pressed(vk_enter)) {
                 layer_sequence_destroy(seq_micropause);
-                seq_micropause_exit = layer_sequence_create(layer,0,0,sql_pause_exit);
+                seq_micropause_exit = layer_sequence_create("UI_TOP",0,0,sql_pause_exit);
             }
         }
     } else {

@@ -32,7 +32,7 @@ if (drawmode) {
                 draw_set_font(fnt_debu);
                                 draw_set_halign(fa_left);
                                 draw_set_valign(fa_top);
-                                draw_text_color(32,32,$"x:{x}\ny:{y}\nz:{z}\nxto:{xto}\nyto:{yto}\nzto:{zto}\ncurx:{cursor_x}\ncury:{cursor_y}",c_aqua,c_aqua,c_aqua,c_aqua,1);
+                                draw_text_color(output_xoffset+32,output_yoffset+32,$"x:{x}\ny:{y}\nz:{z}\nxto:{xto}\nyto:{yto}\nzto:{zto}\ncurx:{cursor_x}\ncury:{cursor_y}",c_aqua,c_aqua,c_aqua,c_aqua,1);
 			}
 		}
 	}
