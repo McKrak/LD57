@@ -35,5 +35,8 @@
     "path":"sprites/spu_whitefade/spu_whitefade.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }

@@ -41,14 +41,11 @@ global.res_ratio_width = max(_w_factor/_h_factor,1);
 global.res_ratio_height = max(_h_factor/_w_factor,1);
 
 //camera_set_view_size(view_camera[0], global.res_width, global.res_height);
-global.res_change = false;
+
 try {
-	if ((surface_get_width(application_surface) != global.res_width
-	|| surface_get_height(application_surface) != global.res_height))
+	if (global.res_change)
     && ((global.res_width > 0) && (global.res_height > 0)) {
-		global.res_change = true;
 		surface_resize(application_surface, global.res_width, global.res_height);
-        
 	}
 } catch(_) {
 	
@@ -77,11 +74,10 @@ if (!surface_exists(surf_view)) || (global.res_change) {
 //camera_set_proj_mat(cam_ui, matrix_build_projection_ortho(NATIVE_W*global.res_ratio_width,NATIVE_H*global.res_ratio_height,0.3,32000));
 //camera_set_view_mat(cam_ui,matrix_build_lookat(fc_x,fc_y,fc_z,fc_xto,fc_yto,fc_zto,0,0,1));
 
-camera_set_proj_mat(cam_ui, matrix_build_projection_perspective_fov(60, global.res_width/global.res_height, 3, 32000));
-camera_set_view_mat(cam_ui,matrix_build_lookat(fc_x,fc_y,fc_z,fc_xto,fc_yto,fc_zto,0,0,1));
 
-//camera_set_view_size(cam_ui,NATIVE_W*global.res_ratio_width,NATIVE_H*global.res_ratio_height);
-//camera_set_view_pos(cam_ui, (NATIVE_W-(NATIVE_W*global.res_ratio_width))/2, (NATIVE_H-(NATIVE_H*global.res_ratio_height))/2);
+
+camera_set_view_size(cam_ui,NATIVE_W*global.res_ratio_width,NATIVE_H*global.res_ratio_height);
+camera_set_view_pos(cam_ui, (NATIVE_W-(NATIVE_W*global.res_ratio_width))/2, (NATIVE_H-(NATIVE_H*global.res_ratio_height))/2);
 
 var _ui_size = min(global.res_width/NATIVE_W,global.res_height/NATIVE_H);
 display_set_gui_maximize(_ui_size,_ui_size,global.res_width/2-320*_ui_size,global.res_height/2-180*_ui_size);
@@ -91,7 +87,10 @@ display_set_gui_maximize(_ui_size,_ui_size,global.res_width/2-320*_ui_size,globa
 
 
 #region FREECAM
+
 if (true) && (global.config == "Debug") {	
+    camera_set_proj_mat(cam_fc, matrix_build_projection_perspective_fov(60, global.res_width/global.res_height, 3, 32000));
+    camera_set_view_mat(cam_fc,matrix_build_lookat(fc_x,fc_y,fc_z,fc_xto,fc_yto,fc_zto,0,0,1));
     if (keyboard_check(vk_shift) && (keyboard_check_pressed(ord("R")))) {
         fc_x = 0;
         fc_y = 0;

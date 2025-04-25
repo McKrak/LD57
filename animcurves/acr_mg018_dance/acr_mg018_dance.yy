@@ -1,0 +1,19 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"acr_mg018_dance",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"hmove","colour":4290799884,"name":"hmove","points":[
+        {"th0":-0.25,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.0,"y":1.0,},
+        {"th0":-0.02290077,"th1":0.03369361,"tv0":-0.010435137,"tv1":0.015353084,"x":0.02290077,"y":1.2199999,},
+        {"th0":-0.72137403,"th1":0.25,"tv0":0.0059857424,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"acr_mg018_dance",
+  "parent":{
+    "name":"mg018",
+    "path":"folders/Game/MicroGame/mg018.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

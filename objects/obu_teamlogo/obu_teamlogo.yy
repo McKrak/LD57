@@ -35,5 +35,8 @@
     "path":"sprites/spu_teamlogo/spu_teamlogo.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }

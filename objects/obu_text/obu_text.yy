@@ -40,5 +40,8 @@
     "path":"sprites/spu_microinsttext/spu_microinsttext.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }

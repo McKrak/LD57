@@ -32,7 +32,7 @@
     "name":"mg018",
     "path":"folders/Game/MicroGame/mg018.yy",
   },
-  "preMultiplyAlpha":false,
+  "preMultiplyAlpha":true,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{

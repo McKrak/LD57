@@ -46,6 +46,7 @@ gu_width = display_get_gui_width();
 gu_height = display_get_gui_height();
 
 cam_ui = camera_create_view(0,0,NATIVE_W,NATIVE_H);
+cam_fc = camera_create_view(0,0,NATIVE_W,NATIVE_H);
 
 
 conType = 0;

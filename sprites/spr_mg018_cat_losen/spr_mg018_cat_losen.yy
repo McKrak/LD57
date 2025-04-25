@@ -27,12 +27,12 @@
   ],
   "name":"spr_mg018_cat_losen",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"mg018",
     "path":"folders/Game/MicroGame/mg018.yy",
   },
-  "preMultiplyAlpha":false,
+  "preMultiplyAlpha":true,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
@@ -93,7 +93,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":377,
+    "xorigin":270,
     "yorigin":624,
   },
   "swatchColours":null,

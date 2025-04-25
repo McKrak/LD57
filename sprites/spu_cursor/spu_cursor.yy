@@ -32,7 +32,7 @@
     "name":"Common",
     "path":"folders/GlobalRes/UI/Common.yy",
   },
-  "preMultiplyAlpha":false,
+  "preMultiplyAlpha":true,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{

@@ -1,9 +1,7 @@
-//if (instance_exists(obs_mg018)) {
-    //switch (obs_mg018.state) {
-        //case obs_mg018.st_cat_move: 
-            //if (obs_mg018.timer_cat_move < 0) {
-                //
-            //}
-        //break;
-    //}
-//}
+if (instance_exists(obs_mg018)) {
+    image_xscale = xscale_init*obs_mg018.dance_squish;
+}
+if (instance_exists(obs_microsys)) {
+    if (obs_microsys.pause) image_speed = 0;
+        else image_speed = 1;
+}

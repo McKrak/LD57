@@ -40,5 +40,8 @@
     "path":"sprites/spr_mg018_arrow/spr_mg018_arrow.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }

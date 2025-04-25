@@ -37,5 +37,8 @@
     "path":"sprites/spr_microstage_num/spr_microstage_num.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }

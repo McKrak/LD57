@@ -1,0 +1,1 @@
+xscale_init = image_xscale;

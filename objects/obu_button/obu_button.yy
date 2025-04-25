@@ -42,5 +42,8 @@
     "path":"sprites/spu_button/spu_button.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }

@@ -37,5 +37,8 @@
     "path":"sprites/spb_micropause/spb_micropause.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }

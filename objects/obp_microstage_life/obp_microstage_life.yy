@@ -39,5 +39,8 @@
     "path":"sprites/spu_microstage_life/spu_microstage_life.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "ui",
+  ],
   "visible":true,
 }
