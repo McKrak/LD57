@@ -13,4 +13,6 @@ mouse_yprevious = mouse_y;
 tmpsrf = -1;
 tmptarget = -1;
 
+type = irandom_range(0,2);
+
 srf_clear = 0;

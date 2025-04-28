@@ -46,6 +46,9 @@ global.cur_mem = 1;
 global.loading = false;
 global.seq_loading = -1;
 
+global.shader_stack = [];
+
+
 
 
 randomize();
@@ -72,7 +75,7 @@ game_set_speed(60, gamespeed_fps);
 //layer_force_draw_depth(true, 0);
 gpu_set_blendmode_ext(bm_one,bm_inv_src_alpha);
 //gpu_set_blendenable(true);
-//shader_set(shd_ui);
+shader_push(shd_ui);
 application_surface_enable(true);
 application_surface_draw_enable(false);
 window_set_cursor(cr_none);

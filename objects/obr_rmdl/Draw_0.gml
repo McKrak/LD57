@@ -5,7 +5,7 @@
 //	shader_set_uniform_f(g_OutlineColour,0.0,0.0,0.0,1.0);
 //	shader_set_uniform_f(g_OutlineRadius,2.0);
 //	shader_set_uniform_f(g_OutlinePixelScale,1.0);
-//	shader_set(shm_outline);
+//	shader_push(shm_outline);
 	
 //}
 
@@ -30,4 +30,4 @@
 if self_update Update();
 if do_draw Draw(true);
 
-//if outline shader_reset();
+//if outline shader_pop();

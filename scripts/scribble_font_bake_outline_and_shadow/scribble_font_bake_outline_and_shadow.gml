@@ -35,9 +35,9 @@ function scribble_font_bake_outline_and_shadow(_sourceFontName, _newFontName, _d
     }
     
     //Set our shader uniforms before use
-    shader_set(_shader);
+    shader_push(_shader);
     shader_set_uniform_f(shader_get_uniform(shader_current(), "u_vShadowDelta"), _dX, _dY);
-    shader_reset();
+    shader_pop();
     
     //Run the baking operation
     scribble_font_bake_shader(_sourceFontName, _newFontName, _shader,

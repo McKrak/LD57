@@ -54,7 +54,7 @@ function Draw(_use_shader = false) {
 	gpu_set_ztestenable(depth_test);
 	
 	if (_use_shader) {
-		if (shader!= -4) shader_set(shader);
+		if (shader!= -4) shader_push(shader);
 		switch(shader) {
 			case shm_ambient:
 				u_AmbientColor	= shader_get_uniform(shm_ambient, "u_AmbientColor");
@@ -70,7 +70,7 @@ function Draw(_use_shader = false) {
 	matrix_set(matrix_world, mat);
 	vertex_submit(buff, pr_trianglelist, tex);
 	
-	if (_use_shader) shader_reset();
+	if (_use_shader) shader_pop();
 	
 	gpu_set_cullmode(cull_noculling);
 	gpu_set_texrepeat(false);

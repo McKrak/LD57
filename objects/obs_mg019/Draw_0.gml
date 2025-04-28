@@ -1,6 +1,11 @@
 if (instance_exists(obs_microsys)) {
     if (result != MGR_WIN) && (!obs_microsys.pause) {
-        draw_sprite_ext(spu_mg019_cutlines,0,room_width/2,room_height/2,.3,.3,0,c_white,0.5);
+        draw_sprite_ext(spu_mg019_cutlines,type,room_width/2,room_height/2-32,.3,.3,0,c_white,0.5);
+        
+        
+        gpu_push_state();
+        gpu_set_blendmode(bm_normal);
+        shader_push();
         
         if (!surface_exists(surf_cut)) {
             surf_cut = surface_create(640,360);
@@ -22,7 +27,7 @@ if (instance_exists(obs_microsys)) {
                 buffer_delete(tmptarget);
                 tmptarget = -1;
             } else {
-                draw_sprite_ext(spu_mg019_cutlines_mask,0,buff_w/2,buff_h/2,.15,.15,0,c_white,1);
+                draw_sprite_ext(spu_mg019_cutlines_mask,type,buff_w/2,buff_h/2-16,.15,.15,0,c_white,1);
             }
             surface_reset_target();
         }
@@ -53,6 +58,8 @@ if (instance_exists(obs_microsys)) {
         mouse_yprevious = obu_cursor.y;
         
         draw_circle_color(obu_cursor.x,obu_cursor.y,3,c_red,c_red,false);
+        shader_pop();
+        gpu_pop_state();
         event_inherited();
         
         

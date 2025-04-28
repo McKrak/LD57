@@ -1,3 +1,6 @@
+if (instance_exists(obs_mg019)) {
+    type = obs_mg019.type;
+}
 spr_face = spr_mg019_steak_face;
 face_exp = 0;
 

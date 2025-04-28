@@ -236,11 +236,11 @@ var _texture = sprite_get_texture(spm_grid,0);
 #endregion
 
 //function Draw() {
-//	shader_set(sh_smf_animate);
+//	shader_push(sh_smf_animate);
 //	matrix_set(matrix_world,mesh.mat);
 //	mainInst.draw();
 //	matrix_set(matrix_world,matrix_build_identity());
-//	shader_reset();	
+//	shader_pop();	
 //}
 
 //if (instance_exists(d_sy)) {

@@ -30,7 +30,7 @@
     "name":"mg019",
     "path":"folders/Game/MicroGame/mg019.yy",
   },
-  "preMultiplyAlpha":true,
+  "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
