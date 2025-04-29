@@ -414,7 +414,6 @@
     {"name":"string_width_scribble_ext","order":6,"path":"scripts/string_width_scribble_ext/string_width_scribble_ext.yy",},
     {"name":"string_width_scribble","order":5,"path":"scripts/string_width_scribble/string_width_scribble.yy",},
     {"name":"vertex_format_create_simple","order":22,"path":"scripts/vertex_format_create_simple/vertex_format_create_simple.yy",},
-    {"name":"sqb_mg015_lose","order":14,"path":"sequences/sqb_mg015_lose/sqb_mg015_lose.yy",},
     {"name":"sqb_mg018_win","order":24,"path":"sequences/sqb_mg018_win/sqb_mg018_win.yy",},
     {"name":"sqb_microstage_prep","order":11,"path":"sequences/sqb_microstage_prep/sqb_microstage_prep.yy",},
     {"name":"sqb_microstage","order":6,"path":"sequences/sqb_microstage/sqb_microstage.yy",},
@@ -509,11 +508,7 @@
     {"name":"spb_mg013_cloudb","order":6,"path":"sprites/spb_mg013_cloudb/spb_mg013_cloudb.yy",},
     {"name":"spb_mg013_ground","order":7,"path":"sprites/spb_mg013_ground/spb_mg013_ground.yy",},
     {"name":"spb_mg014_ground","order":1,"path":"sprites/spb_mg014_ground/spb_mg014_ground.yy",},
-<<<<<<< Updated upstream
     {"name":"spb_mg015_accept","order":14,"path":"sprites/spb_mg015_accept/spb_mg015_accept.yy",},
-=======
-    {"name":"spb_mg015_lose","order":15,"path":"sprites/spb_mg015_lose/spb_mg015_lose.yy",},
->>>>>>> Stashed changes
     {"name":"spb_mg016_bg","order":2,"path":"sprites/spb_mg016_bg/spb_mg016_bg.yy",},
     {"name":"spb_mg017_flower","order":1,"path":"sprites/spb_mg017_flower/spb_mg017_flower.yy",},
     {"name":"spb_mg017_ground","order":2,"path":"sprites/spb_mg017_ground/spb_mg017_ground.yy",},
