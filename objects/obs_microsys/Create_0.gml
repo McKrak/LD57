@@ -103,6 +103,7 @@ st_microinit = function() {
     
     micro_str = format_int(microgame,3,0);
     texturegroup_load($"mg{micro_str}");
+    //array_push(global.mem[0],)
     
     state = st_microwait;
 }

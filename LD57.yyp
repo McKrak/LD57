@@ -487,6 +487,7 @@
     {"id":{"name":"string_width_scribble_ext","path":"scripts/string_width_scribble_ext/string_width_scribble_ext.yy",},},
     {"id":{"name":"string_width_scribble","path":"scripts/string_width_scribble/string_width_scribble.yy",},},
     {"id":{"name":"vertex_format_create_simple","path":"scripts/vertex_format_create_simple/vertex_format_create_simple.yy",},},
+    {"id":{"name":"sqb_mg015_lose","path":"sequences/sqb_mg015_lose/sqb_mg015_lose.yy",},},
     {"id":{"name":"sqb_mg018_win","path":"sequences/sqb_mg018_win/sqb_mg018_win.yy",},},
     {"id":{"name":"sqb_microstage_prep","path":"sequences/sqb_microstage_prep/sqb_microstage_prep.yy",},},
     {"id":{"name":"sqb_microstage","path":"sequences/sqb_microstage/sqb_microstage.yy",},},
@@ -590,7 +591,11 @@
     {"id":{"name":"spb_mg013_cloudb","path":"sprites/spb_mg013_cloudb/spb_mg013_cloudb.yy",},},
     {"id":{"name":"spb_mg013_ground","path":"sprites/spb_mg013_ground/spb_mg013_ground.yy",},},
     {"id":{"name":"spb_mg014_ground","path":"sprites/spb_mg014_ground/spb_mg014_ground.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"spb_mg015_accept","path":"sprites/spb_mg015_accept/spb_mg015_accept.yy",},},
+=======
+    {"id":{"name":"spb_mg015_lose","path":"sprites/spb_mg015_lose/spb_mg015_lose.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"spb_mg015_phone","path":"sprites/spb_mg015_phone/spb_mg015_phone.yy",},},
     {"id":{"name":"spb_mg016_bg","path":"sprites/spb_mg016_bg/spb_mg016_bg.yy",},},
     {"id":{"name":"spb_mg017_bg","path":"sprites/spb_mg017_bg/spb_mg017_bg.yy",},},
