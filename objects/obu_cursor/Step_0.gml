@@ -6,8 +6,8 @@
         if (!is_nan(_x)) x = _x;
         if (!is_nan(_y)) y = _y;
     } else {
-        x = clamp(x + window_mouse_get_delta_x(), 0, NATIVE_W);
-        y = clamp(y + window_mouse_get_delta_y(), 0, NATIVE_H);
+        x = clamp(x + window_mouse_get_delta_x()/global.min_scale, 0, NATIVE_W);
+        y = clamp(y + window_mouse_get_delta_y()/global.min_scale, 0, NATIVE_H);
         if (instance_exists(obs_cursor_bounds)) {
             x = clamp(x,obs_cursor_bounds.bbox_left,obs_cursor_bounds.bbox_right);
             y = clamp(y,obs_cursor_bounds.bbox_top,obs_cursor_bounds.bbox_bottom);
