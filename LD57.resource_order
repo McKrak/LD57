@@ -510,11 +510,7 @@
     {"name":"spb_mg013_ground","order":7,"path":"sprites/spb_mg013_ground/spb_mg013_ground.yy",},
     {"name":"spb_mg014_ground","order":1,"path":"sprites/spb_mg014_ground/spb_mg014_ground.yy",},
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
     {"name":"spb_mg015_accept","order":14,"path":"sprites/spb_mg015_accept/spb_mg015_accept.yy",},
-=======
-    {"name":"spb_mg015_lose","order":15,"path":"sprites/spb_mg015_lose/spb_mg015_lose.yy",},
->>>>>>> Stashed changes
 =======
     {"name":"spb_mg015_lose","order":15,"path":"sprites/spb_mg015_lose/spb_mg015_lose.yy",},
 >>>>>>> Stashed changes
