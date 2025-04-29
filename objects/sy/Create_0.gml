@@ -7,7 +7,7 @@ mem_data = {};
 memory = [];
 //dt = delta_time/(277 + 7/9)/60;
 
-dt = delta_time/1000000;
+dt = 1;//delta_time/1000000;
 
 //show_debug_log(true);
 

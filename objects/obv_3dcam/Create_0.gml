@@ -1,7 +1,8 @@
 //First, create the camera. We could use camera_create_view, but that is more useful in a 2D environment
 camera = camera_create();
 
-view_enabled[view] = true;
+view_enabled = true;
+room_set_view_enabled(room,true);
 view_visible[view] = true;
 
 

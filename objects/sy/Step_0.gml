@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 	t++;
-dt = delta_time/(277 + 7/9)/60;
+dt = 1;//delta_time/(277 + 7/9)/60;
 
 //if (conType = 0){
 	//k_pause = keyboard_check_pressed(vk_escape);

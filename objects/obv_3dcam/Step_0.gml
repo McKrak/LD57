@@ -24,7 +24,7 @@ if (!surface_exists(output)) {
     }
 if (surface_exists(output)) {
     view_visible[view] = true;
-    room_set_view_enabled(room,view);
+    room_set_view_enabled(room,true);
     view_surface_id[view] = output;
 
 	if (surface_get_width(output) != res_width*output_xscale) 

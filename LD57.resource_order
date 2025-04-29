@@ -218,7 +218,6 @@
     {"name":"obu_teamlogo","order":10,"path":"objects/obu_teamlogo/obu_teamlogo.yy",},
     {"name":"obu_text","order":4,"path":"objects/obu_text/obu_text.yy",},
     {"name":"obu_whitefade","order":2,"path":"objects/obu_whitefade/obu_whitefade.yy",},
-    {"name":"obv_mg007_cam","order":4,"path":"objects/obv_mg007_cam/obv_mg007_cam.yy",},
     {"name":"obv_opening","order":5,"path":"objects/obv_opening/obv_opening.yy",},
     {"name":"PARENT_DRAWABLE","order":49,"path":"objects/PARENT_DRAWABLE/PARENT_DRAWABLE.yy",},
     {"name":"si_cam","order":1,"path":"objects/si_cam/si_cam.yy",},

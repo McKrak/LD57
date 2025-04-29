@@ -3,50 +3,61 @@ function texnode(_path = "") : node() constructor {
 	name = "Texture";
 	type = NODE_TEXTURE;
 	
-	spr_texture = noone;
+    buf_texture = -1;
+	spr_texture = -1;
 	frames = 1;
 	
 	ELEPHANT_SCHEMA {
 		v1: {
             ELEPHANT_VERSION_VERBOSE : true,
 			name: buffer_string,
-			spr_texture: buffer_string,
-			frames: buffer_u32,
-			
+            buf_texture: buffer_string,
+			frames: buffer_u32
 		}
 	}
 	
-	ELEPHANT_PRE_WRITE_METHOD {
-		if (sprite_exists(spr_texture)) {
-			spr_texture = sprite_to_base64(spr_texture);
-		}
-	}
-	
-	ELEPHANT_POST_WRITE_METHOD {
-		if (is_string(spr_texture)) {
-			spr_texture = base64_to_sprite(spr_texture);
-		}
-	}
+	//ELEPHANT_PRE_WRITE_METHOD {
+		//if (sprite_exists(spr_texture)) {
+			//spr_texture = sprite_to_base64(spr_texture);
+		//}
+	//}
+	//
+	//ELEPHANT_POST_WRITE_METHOD {
+		//if (is_string(spr_texture)) {
+			//spr_texture = base64_to_sprite(spr_texture);
+		//}
+	//}
 	
 	ELEPHANT_POST_READ_METHOD {
-		if (is_string(spr_texture)) {
-			spr_texture = base64_to_sprite(spr_texture);
+		if (is_string(buf_texture)) {
+			spr_texture = sprite_add(buf_texture,0,0,0,0,0);
 		}
 	}
 
 	function prompt_image() {
-		var _sprite = load_image();
-		if (_sprite[0] != noone) {
-			if sprite_exists(spr_texture) sprite_delete(spr_texture);
-			spr_texture = _sprite[0];
-			rpk_rename_node(self, filename_remove_extension(_sprite[1]));
-		}	
+		//var _sprite = load_image();
+		//if (_sprite[0] != noone) {
+			//if sprite_exists(spr_texture) sprite_delete(spr_texture);
+			//spr_texture = _sprite[0];
+			//rpk_rename_node(self, filename_remove_extension(_sprite[1]));
+		//}	
 	}
     
     function set_texture(_spr) {
-        if (sprite_exists(_spr)) {
-            spr_texture = _spr;
+        if (file_exists(_spr)) {
+            buf_texture = $"data:image/png;base64,";
+            var _data = buffer_load(_spr);
+            var _b64 = buffer_base64_encode(_data,0,buffer_get_size(_data));
+            buffer_delete(_data);
+            buf_texture += _b64;
+            if (sprite_exists(spr_texture)) {
+                sprite_delete(spr_texture);
+            }
+            spr_texture = sprite_add(buf_texture,0,0,0,0,0);
         }
+        //if (sprite_exists(_spr)) {
+            //spr_texture = _spr;
+        //}
     }
 	
 	function remove() {

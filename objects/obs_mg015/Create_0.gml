@@ -2,6 +2,7 @@
 event_inherited();
 time_call = irandom_range(30,90);
 timer_call = time_call;
+seq_lose = -1;
 
 st_waiting = function() {
     timer_call -= 1*sy.dt;
@@ -17,6 +18,10 @@ st_calling = function() {
     if (instance_exists(obv_3dcam)) {
         if (collision_point(obv_3dcam.cursor_x,obv_3dcam.cursor_y,obj_mg015_reject_button,false,true)) && (mouse_check_button_pressed(mb_left)) {
             state = st_dragging;
+        } else if (collision_point(obv_3dcam.cursor_x,obv_3dcam.cursor_y,obj_mg015_call_button,false,true)) && (mouse_check_button_pressed(mb_left)) {
+            state = st_lose;
+            layer_set_visible("Call", false);
+            seq_lose = layer_sequence_create("Lose",0,0,sqb_mg015_lose);
         }
     }
 }
@@ -34,6 +39,10 @@ st_dragging = function() {
 
 st_reject = function() {
     layer_set_visible("Call", false);
+}
+
+st_lose = function() {
+    
 }
 
 state = st_waiting;

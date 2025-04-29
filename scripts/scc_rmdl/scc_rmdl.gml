@@ -155,13 +155,13 @@ function mdlnode(_path = "") : node() constructor {
                     for (var i = 0; i < array_length(_dir_split) - 1; i++) {
                         _dir += _dir_split[i] + "/";
                     }
-                    _dir += "textures/";
+                    //_dir += "textures/";
                     if (directory_exists(_dir)) {
+                        
                         for (var i = 0; i < array_length(vbm.texture_sprites); i++) {
                             if (file_exists(_dir + vbm.texture_sprites[i])) {
-                                _spr = sprite_add(_dir + vbm.texture_sprites[i],0,0,0,0,0);
                                 var _rtex = rpk_add_node(_host, texnode, filename_remove_extension(vbm.texture_sprites[i]));
-                                _rtex.set_texture(_spr);
+                                _rtex.set_texture(_dir + vbm.texture_sprites[i]);
                                 rpk_rename_node(_rtex, filename_remove_extension(vbm.texture_sprites[i]));
                             }
                         }

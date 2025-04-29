@@ -36,7 +36,7 @@ if (!pause) {
             obu_cursor.image_index = obs_microgame.cursor_spr;
         } else obu_cursor.image_index = 0;
     }
-    if (!window_mouse_get_locked()) window_mouse_set_locked(true);
+    //if (!window_mouse_get_locked()) window_mouse_set_locked(true);
         
     if (keyboard_check_pressed(vk_enter)) {
         pause = !pause;
