@@ -1,9 +1,9 @@
-//shader_push(shm_ambient);
+//shader_set(shm_ambient);
 //shader_set_uniform_f(u_AmbientColor, ambientColor.X, ambientColor.Y, ambientColor.Z);
 
 
 //with (obr_mesh) Draw(true);
-//shader_pop();
+//shader_reset();
 if (add_shadows) {
 	with (obr_light) Mapping();
 }

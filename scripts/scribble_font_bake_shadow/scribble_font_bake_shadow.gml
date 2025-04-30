@@ -27,13 +27,13 @@ function scribble_font_bake_shadow(_source_font_name, _new_font_name, _dx, _dy, 
     }
 
     //Set our shader uniforms before use
-    shader_push(__shd_scribble_bake_shadow);
+    shader_set(__shd_scribble_bake_shadow);
     shader_set_uniform_f(shader_get_uniform(shader_current(), "u_vShadowDelta"), _dx, _dy);
     shader_set_uniform_f(shader_get_uniform(shader_current(), "u_vShadowColor"), color_get_red(  _shadow_color)/255,
                                                                                  color_get_green(_shadow_color)/255,
                                                                                  color_get_blue( _shadow_color)/255,
                                                                                  _shadow_alpha);
-    shader_pop();
+    shader_reset();
 
     //Run the baking operation
     scribble_font_bake_shader(_source_font_name, _new_font_name, __shd_scribble_bake_shadow,

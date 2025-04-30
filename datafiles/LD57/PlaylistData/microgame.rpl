@@ -1,0 +1,233 @@
+[
+    {
+        "mgid": "mg000",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            null,
+            null
+        ],
+        "type": 0,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg001",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            null,
+            null
+        ],
+        "type": 0,
+        "cont_type": 1
+    },
+    {
+        "mgid": "mg002",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_popup",
+            null
+        ],
+        "type": 1,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg003",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_shake",
+            "snm_soul_n"
+        ],
+        "type": 1,
+        "cont_type": 2
+    },
+    {
+        "mgid": "mg004",
+        "time": 480,
+        "autowin": true,
+        "track": [
+            "snm_stack",
+            null
+        ],
+        "type": 0,
+        "cont_type": 2
+    },
+    {
+        "mgid": "mg005",
+        "time": 480,
+        "autowin": false,
+        "track": [
+            "snm_lock",
+            null
+        ],
+        "type": 0,
+        "cont_type": 1
+    },
+    {
+        "mgid": "mg006",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_faker",
+            null
+        ],
+        "type": 0,
+        "cont_type": 2
+    },
+    {
+        "mgid": "mg007",
+        "time": 480,
+        "autowin": false,
+        "track": [
+            "snm_soul",
+            "snm_soul_n"
+        ],
+        "type": 1,
+        "cont_type": 2
+    },
+    {
+        "mgid": "mg008",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_smile",
+            null
+        ],
+        "type": 0,
+        "cont_type": 1
+    },
+    {
+        "mgid": "mg009",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_popup",
+            null
+        ],
+        "type": 0,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg010",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_type",
+            "snm_soul_n"
+        ],
+        "type": 1,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg011",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_trim",
+            "snm_trim_n"
+        ],
+        "type": 1,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg012",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            "snm_statueboss",
+            null
+        ],
+        "type": 3,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg013",
+        "time": 240,
+        "autowin": true,
+        "track": [
+            null,
+            null
+        ],
+        "type": 1,
+        "cont_type": 2
+    },
+    {
+        "mgid": "mg014",
+        "time": 240,
+        "autowin": true,
+        "track": [
+            null,
+            null
+        ],
+        "type": 1,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg015",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            null,
+            null
+        ],
+        "type": 2,
+        "cont_type": 1
+    },
+    {
+        "mgid": "mg016",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            null,
+            null
+        ],
+        "type": 0,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg017",
+        "time": 480,
+        "autowin": false,
+        "track": [
+            null,
+            null
+        ],
+        "type": 0,
+        "cont_type": 1
+    },
+    {
+        "mgid": "mg018",
+        "time": 480,
+        "autowin": false,
+        "track": [
+            null,
+            null
+        ],
+        "type": 1,
+        "cont_type": 0
+    },
+    {
+        "mgid": "mg019",
+        "time": 480,
+        "autowin": false,
+        "track": [
+            "snm_stack",
+            null
+        ],
+        "type": 0,
+        "cont_type": 1
+    },
+    {
+        "mgid": "mg020",
+        "time": 240,
+        "autowin": false,
+        "track": [
+            null,
+            null
+        ],
+        "type": 0,
+        "cont_type": 0
+    }
+]

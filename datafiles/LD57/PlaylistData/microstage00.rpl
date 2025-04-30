@@ -1,60 +1,10 @@
 {
-    "microlist": [
-        {
-            "index": 2,
-            "cont_type": 0
-        },
-        {
-            "index": 3,
-            "cont_type": 2
-        },
-        {
-            "index": 4,
-            "cont_type": 2
-        },
-        {
-            "index": 5,
-            "cont_type": 1
-        },
-        {
-            "index": 6,
-            "cont_type": 2
-        },
-        {
-            "index": 8,
-            "cont_type": 1
-        },
-        {
-            "index": 9,
-            "cont_type": 0
-        },
-        {
-            "index": 10,
-            "cont_type": 0
-        },
-        {
-            "index": 11,
-            "cont_type": 0
-        },
-        {
-            "index": 13,
-            "cont_type": 0
-        },
-        {
-            "index": 14,
-            "cont_type": 0
-        },
-        {
-            "index": 15,
-            "cont_type": 0
-        },
-        {
-            "index": 16,
-            "cont_type": 0
-        }
-    ],
-    "boss": {
-        "index": 12,
-        "cont_type": 0
+    "microstage00": {
+        "playlist": [2,3,4,5,6,8,9,10,11],
+        "boss": [12]
+    },
+    "microstage01": {
+        "playlist": [13,14,15,16,18,19],
+        "boss": [12]
     }
 }

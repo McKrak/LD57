@@ -207,10 +207,10 @@ function scribble_font_bake_shader(_source_font_name, _new_font_name, _shader, _
     gpu_set_tex_filter(_smooth);
     gpu_set_blendenable(false);
     
-    shader_push(_shader);
+    shader_set(_shader);
     shader_set_uniform_f(shader_get_uniform(_shader, "u_vTexel"), texture_get_texel_width(_texture), texture_get_texel_height(_texture));
     draw_surface(_surface_0, 0, 0);
-    shader_pop();
+    shader_reset();
     
     gpu_set_tex_filter(_old_filter);
     gpu_set_blendenable(true);

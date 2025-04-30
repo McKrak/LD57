@@ -9,6 +9,7 @@ difficulty = 0;
 microgame = 0;
 micro_str = "";
 micro_result = MGR_UNDECIDED;
+microgame_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microgame.rpl"));
 micro_playstyle = 0;
 micro_playlist_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microstage00.rpl"));
 micro_playlist_init = [];
@@ -90,7 +91,7 @@ st_intro = function() {
 
 st_microinit = function() {
     //microgame = ++microgame mod 17;
-    microgame = 14;
+    microgame = 18;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
     
     //if (playlist_ind >= micro_playlist_len) {

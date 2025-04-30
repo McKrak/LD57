@@ -109,7 +109,7 @@ function Mapping() {
 			min(max(size,1),16384));
 	surface_set_target(shadowMap);
 	
-		shader_push(shm_shadowmap);
+		shader_set(shm_shadowmap);
 		
 		draw_clear(c_white);
 		with (PARENT_DRAWABLE) {
@@ -122,12 +122,12 @@ function Mapping() {
 			}
 		}
 		
-		shader_pop(); //additional
+		shader_reset(); //additional
 	
 	surface_reset_target();
 }
 function Draw() {
-	shader_push(shm_lighting);
+	shader_set(shm_lighting);
 	
 	var _texShadowMap	= surface_get_texture(shadowMap),
 		_teLightMask	= sprite_get_texture(mask, 0);
@@ -147,7 +147,7 @@ function Draw() {
 		Draw();
 	}
 	
-	shader_pop(); //addtnl
+	shader_reset(); //addtnl
 }
 
 debugMesh = noone;

@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Intro",
-    "path":"folders/Game/Cutscenes/Intro.yy",
+    "name":"CommonObj",
+    "path":"folders/Game/CommonObj.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -5,7 +5,6 @@ if (instance_exists(obs_microsys)) {
         
         gpu_push_state();
         gpu_set_blendmode(bm_normal);
-        shader_push();
         
         if (!surface_exists(surf_cut)) {
             surf_cut = surface_create(640,360);
@@ -58,7 +57,7 @@ if (instance_exists(obs_microsys)) {
         mouse_yprevious = obu_cursor.y;
         
         draw_circle_color(obu_cursor.x,obu_cursor.y,3,c_red,c_red,false);
-        shader_pop();
+        
         gpu_pop_state();
         event_inherited();
         

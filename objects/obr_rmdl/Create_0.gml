@@ -14,7 +14,7 @@ function Draw(_use_shader = false) {
             gpu_set_texfilter(tex_filter[i]);
             
             if (_use_shader) {
-                if (shader!= -4) shader_push(shader);
+                if (shader!= -4) shader_set(shader);
                 switch(shader) {
                     case shm_model:
                         u_AmbientColor	= shader_get_uniform(shader, "u_AmbientColor");
@@ -30,7 +30,7 @@ function Draw(_use_shader = false) {
             shader_set_uniform_matrix_array(u_rigged_transforms, bone_mat);	// Send final pose to shader
             //VBM_Model_Submit(buff,spm_grid);
             VBM_Model_SubmitMesh(buff,texture[i],i);
-            if _use_shader shader_pop();
+            if _use_shader shader_reset();
         }
         matrix_set(matrix_world,matrix_build_identity());
 	

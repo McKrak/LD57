@@ -9,7 +9,7 @@ function Draw(_use_shader = false) {
 		gpu_set_zwriteenable(depth_write);
 	
 		if (_use_shader) {
-			if (shader!= -4) shader_push(shader);
+			if (shader!= -4) shader_set(shader);
 			switch(shader) {
 				case shm_model:
 					u_AmbientColor	= shader_get_uniform(shader, "u_AmbientColor");
@@ -30,7 +30,7 @@ function Draw(_use_shader = false) {
 		VBM_Model_Submit(buff,tex);
 		//buff.Submit(pr_trianglelist,tex);
 		matrix_set(matrix_world,matrix_build_identity());
-		if _use_shader shader_pop();
+		if _use_shader shader_reset();
 	
 		gpu_pop_state();
 	}
@@ -43,7 +43,7 @@ function Draw(_use_shader = false) {
 //	gpu_set_texrepeat(tex_repeat);
 //	gpu_set_ztestenable(true);
 
-//	shader_push(shm_lighting);
+//	shader_set(shm_lighting);
 //	shader
 //	u_bonetransforms = shader_get_uniform(shm_lighting, "u_bonetransforms");	// Find uniform handle to set bone transforms
 //	shader_set_uniform_matrix_array(u_bonetransforms, anim.OutputPose());	// Sets uniform for shader
@@ -53,7 +53,7 @@ function Draw(_use_shader = false) {
 //	buff.SubmitIndex(0,pr_trianglelist,spr0);
 //	buff.SubmitIndex(1,pr_trianglelist,spr1);
 //	matrix_set(matrix_world,matrix_build_identity());
-//	if _use_shader shader_pop();
+//	if _use_shader shader_reset();
 	
 //	gpu_pop_state();
 	
