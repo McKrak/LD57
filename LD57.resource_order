@@ -96,6 +96,7 @@
     {"name":"mdl_P","order":3,"path":"objects/mdl_P/mdl_P.yy",},
     {"name":"obb_microstage","order":7,"path":"objects/obb_microstage/obb_microstage.yy",},
     {"name":"obj_dream","order":12,"path":"objects/obj_dream/obj_dream.yy",},
+    {"name":"obj_main_dreambubble","order":10,"path":"objects/obj_main_dreambubble/obj_main_dreambubble.yy",},
     {"name":"obj_mg000_lose","order":4,"path":"objects/obj_mg000_lose/obj_mg000_lose.yy",},
     {"name":"obj_mg000_win","order":1,"path":"objects/obj_mg000_win/obj_mg000_win.yy",},
     {"name":"obj_mg001_bullet","order":14,"path":"objects/obj_mg001_bullet/obj_mg001_bullet.yy",},

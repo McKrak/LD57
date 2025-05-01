@@ -1,4 +1,4 @@
-text = "MOUSE";
+text = "UNDEFINED";
 inst = 0;
 if (instance_exists(obs_microsys)) {
     switch (obs_microsys.micro_playstyle) {

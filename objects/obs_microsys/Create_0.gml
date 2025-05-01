@@ -6,11 +6,18 @@ life_init = 4;
 life = life_init;
 spd = 1;
 difficulty = 0;
+
 microgame = 0;
 micro_str = "";
 micro_result = MGR_UNDECIDED;
 microgame_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microgame.rpl"));
 micro_playstyle = 0;
+micro_time = 240;
+micro_type = 0;
+micro_autowin = false;
+micro_song = [undefined,undefined];
+
+
 micro_playlist_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microstage00.rpl"));
 micro_playlist_init = [];
 micro_playlist_len = array_length(micro_playlist_init);
@@ -102,8 +109,13 @@ st_microinit = function() {
     //playlist_ind++;
 
     
-    micro_str = format_int(microgame,3,0);
-    texturegroup_load($"mg{micro_str}");
+    micro_str = microgame_file[microgame].mgid;
+    micro_playstyle = microgame_file[microgame].cont_type;
+    micro_time = microgame_file[microgame].time;
+    micro_type = microgame_file[microgame].type;
+    micro_autowin = microgame_file[microgame].autowin;
+    micro_song = microgame_file[microgame].track;
+    texturegroup_load($"{micro_str}");
     
     state = st_microwait;
 }

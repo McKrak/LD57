@@ -154,6 +154,7 @@
     {"id":{"name":"obb_microstage","path":"objects/obb_microstage/obb_microstage.yy",},},
     {"id":{"name":"obj_blackfade","path":"objects/obj_blackfade/obj_blackfade.yy",},},
     {"id":{"name":"obj_dream","path":"objects/obj_dream/obj_dream.yy",},},
+    {"id":{"name":"obj_main_dreambubble","path":"objects/obj_main_dreambubble/obj_main_dreambubble.yy",},},
     {"id":{"name":"obj_mg000_lose","path":"objects/obj_mg000_lose/obj_mg000_lose.yy",},},
     {"id":{"name":"obj_mg000_win","path":"objects/obj_mg000_win/obj_mg000_win.yy",},},
     {"id":{"name":"obj_mg001_bullet","path":"objects/obj_mg001_bullet/obj_mg001_bullet.yy",},},
