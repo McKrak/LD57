@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.106327,
+  "duration":0.10632653,
   "name":"snu_hover",
   "parent":{
     "name":"SFX",

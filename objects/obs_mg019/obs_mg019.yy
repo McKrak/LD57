@@ -14,7 +14,6 @@
   "name":"obs_mg019",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"time","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"480",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"micro_song","path":"objects/obs_microgame/obs_microgame.yy",},"resource":{"name":"snm_stack","path":"sounds/snm_stack/snm_stack.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snm_stack",},
   ],
   "parent":{
     "name":"mg019",

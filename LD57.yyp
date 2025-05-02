@@ -3,6 +3,7 @@
   "%Name":"LD57",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"ax_mg010","name":"ax_mg010","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[
@@ -563,19 +564,7 @@
     {"id":{"name":"snj_microlose","path":"sounds/snj_microlose/snj_microlose.yy",},},
     {"id":{"name":"snj_microwin","path":"sounds/snj_microwin/snj_microwin.yy",},},
     {"id":{"name":"snj_win","path":"sounds/snj_win/snj_win.yy",},},
-    {"id":{"name":"snm_faker","path":"sounds/snm_faker/snm_faker.yy",},},
-    {"id":{"name":"snm_lock","path":"sounds/snm_lock/snm_lock.yy",},},
     {"id":{"name":"snm_nightamb","path":"sounds/snm_nightamb/snm_nightamb.yy",},},
-    {"id":{"name":"snm_popup","path":"sounds/snm_popup/snm_popup.yy",},},
-    {"id":{"name":"snm_shake","path":"sounds/snm_shake/snm_shake.yy",},},
-    {"id":{"name":"snm_smile","path":"sounds/snm_smile/snm_smile.yy",},},
-    {"id":{"name":"snm_soul_n","path":"sounds/snm_soul_n/snm_soul_n.yy",},},
-    {"id":{"name":"snm_soul","path":"sounds/snm_soul/snm_soul.yy",},},
-    {"id":{"name":"snm_stack","path":"sounds/snm_stack/snm_stack.yy",},},
-    {"id":{"name":"snm_statueboss","path":"sounds/snm_statueboss/snm_statueboss.yy",},},
-    {"id":{"name":"snm_trim_n","path":"sounds/snm_trim_n/snm_trim_n.yy",},},
-    {"id":{"name":"snm_trim","path":"sounds/snm_trim/snm_trim.yy",},},
-    {"id":{"name":"snm_type","path":"sounds/snm_type/snm_type.yy",},},
     {"id":{"name":"snu_hover","path":"sounds/snu_hover/snu_hover.yy",},},
     {"id":{"name":"snu_microlose0","path":"sounds/snu_microlose0/snu_microlose0.yy",},},
     {"id":{"name":"snu_microwinA","path":"sounds/snu_microwinA/snu_microwinA.yy",},},

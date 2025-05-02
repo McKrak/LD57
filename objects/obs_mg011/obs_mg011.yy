@@ -10,8 +10,6 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"nightmare","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"cursor_spr","path":"objects/obs_microgame/obs_microgame.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"micro_song","path":"objects/obs_microgame/obs_microgame.yy",},"resource":{"name":"snm_trim","path":"sounds/snm_trim/snm_trim.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snm_trim",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"micro_song_n","path":"objects/obs_microgame/obs_microgame.yy",},"resource":{"name":"snm_trim_n","path":"sounds/snm_trim_n/snm_trim_n.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snm_trim_n",},
   ],
   "parent":{
     "name":"mg011",

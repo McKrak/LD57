@@ -9,9 +9,7 @@
   ],
   "managed":true,
   "name":"obs_mg009",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"micro_song","path":"objects/obs_microgame/obs_microgame.yy",},"resource":{"name":"snm_popup","path":"sounds/snm_popup/snm_popup.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snm_popup",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"mg009",
     "path":"folders/Game/MicroGame/mg009.yy",

@@ -12,8 +12,8 @@
   "duration":3.478254,
   "name":"snj_lose",
   "parent":{
-    "name":"JIN",
-    "path":"folders/GlobalRes/Audio/JIN.yy",
+    "name":"MUS",
+    "path":"folders/GlobalRes/Audio/MUS.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

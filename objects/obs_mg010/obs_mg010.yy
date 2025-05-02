@@ -8,10 +8,7 @@
   ],
   "managed":true,
   "name":"obs_mg010",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"micro_song","path":"objects/obs_microgame/obs_microgame.yy",},"resource":{"name":"snm_type","path":"sounds/snm_type/snm_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snm_type",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obs_microgame","path":"objects/obs_microgame/obs_microgame.yy",},"propertyId":{"name":"micro_song_n","path":"objects/obs_microgame/obs_microgame.yy",},"resource":{"name":"snm_soul_n","path":"sounds/snm_soul_n/snm_soul_n.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snm_soul_n",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"mg010",
     "path":"folders/Game/MicroGame/mg010.yy",

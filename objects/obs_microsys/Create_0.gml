@@ -100,14 +100,14 @@ st_intro = function() {
 
 st_microinit = function() {
     //microgame = ++microgame mod 17;
-    //microgame = 3;
+    microgame = 10;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
     
-    if (playlist_ind >= micro_playlist_len) {
-        init_playlist();
-    }
-    microgame = micro_playlist[playlist_ind];
-    playlist_ind++;
+    //if (playlist_ind >= micro_playlist_len) {
+        //init_playlist();
+    //}
+    //microgame = micro_playlist[playlist_ind];
+    //playlist_ind++;
 
     
     micro_str = microgame_file[microgame].mgid;
@@ -119,6 +119,7 @@ st_microinit = function() {
     micro_inst = loc($"microgame_inst.{micro_str}");
     
     texturegroup_load($"{micro_str}");
+    //audio_group_load(ax_mg010)
     
     state = st_microwait;
 }

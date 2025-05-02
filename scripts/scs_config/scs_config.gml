@@ -46,6 +46,17 @@ global.cur_mem = 1;
 global.loading = false;
 global.seq_loading = -1;
 
+global.audio_groups = {};
+{
+    var _axgrp = undefined;
+    var i = 0;
+    _axgrp = audio_group_name(i);
+    while (_axgrp != "<undefined>") {
+        struct_set(global.audio_groups,_axgrp,i);
+        _axgrp = audio_group_name(++i);
+    }
+}
+print(global.audio_groups);
 global.shader_stack = [];
 
 
@@ -79,7 +90,6 @@ game_set_speed(60, gamespeed_fps);
 application_surface_enable(true);
 application_surface_draw_enable(false);
 window_set_cursor(cr_none);
-
 scribble_font_set_default("fnt_main");
 
 

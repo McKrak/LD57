@@ -12,8 +12,8 @@
   "duration":4.0,
   "name":"snj_microlose",
   "parent":{
-    "name":"JIN",
-    "path":"folders/GlobalRes/Audio/JIN.yy",
+    "name":"MUS",
+    "path":"folders/GlobalRes/Audio/MUS.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

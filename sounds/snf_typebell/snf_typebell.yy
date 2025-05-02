@@ -2,14 +2,14 @@
   "$GMSound":"",
   "%Name":"snf_typebell",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ax_mg010",
+    "path":"audiogroups/ax_mg010",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.857143,
+  "duration":0.85714287,
   "name":"snf_typebell",
   "parent":{
     "name":"SFX",

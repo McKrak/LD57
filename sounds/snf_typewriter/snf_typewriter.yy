@@ -2,14 +2,14 @@
   "$GMSound":"",
   "%Name":"snf_typewriter",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ax_mg010",
+    "path":"audiogroups/ax_mg010",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.214286,
+  "duration":0.21428572,
   "name":"snf_typewriter",
   "parent":{
     "name":"SFX",

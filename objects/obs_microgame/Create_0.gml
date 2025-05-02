@@ -26,7 +26,6 @@ if (irandom_range(0,9) == 9) {
 var _trackpath = $"{ROOT_DIR}/StreamData/{micro_song}.ogg";
 if (nightmare) _trackpath = $"{ROOT_DIR}/StreamData/{micro_song_n}.ogg";
 if (file_exists(_trackpath)) {
-    print("GURT");
     track = audio_create_stream(_trackpath);
 }
 //if (nightmare) && (audio_exists(micro_song_n)) {
