@@ -7,6 +7,6 @@ if (keyboard_check_pressed(vk_enter)) {
 if (layer_sequence_is_finished(seq)) {
     if (!layer_sequence_exists(layer,seq_ui)) seq_ui = layer_sequence_create(layer,0,0,sql_main); 
     if (keyboard_check_pressed(vk_enter)) {
-        layer_sequence_headpos(seq,60);
+        layer_sequence_headpos(seq_ui,60);
     }
 }

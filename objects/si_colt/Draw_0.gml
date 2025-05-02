@@ -9,9 +9,9 @@
 	//	btDebugDrawInMemory_toBuffer(debugDraw, debugDrawBuffer);
 	//	buffer_set_used_size(debugDrawBuffer, _size);
 	//	var _vbuffer = vertex_create_buffer_from_buffer(debugDrawBuffer, btGetDebugDrawVertexFormat());
-	//	shader_set(btShDebugDraw);
+	//	shader_push(btShDebugDraw);
 	//	vertex_submit(_vbuffer, pr_linelist, -1);
-	//	shader_reset();
+	//	shader_pop();
 	//	vertex_delete_buffer(_vbuffer);
 	//}
 	

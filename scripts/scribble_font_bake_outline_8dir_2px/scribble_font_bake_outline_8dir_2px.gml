@@ -23,11 +23,11 @@ function scribble_font_bake_outline_8dir_2px(_source_font_name, _new_font_name, 
     }
 
     //Set our shader uniforms before use
-    shader_set(__shd_scribble_bake_outline_8dir_2px);
+    shader_push(__shd_scribble_bake_outline_8dir_2px);
     shader_set_uniform_f(shader_get_uniform(shader_current(), "u_vOutlineColor"), color_get_red(  _outline_color)/255,
                                                                                   color_get_green(_outline_color)/255,
                                                                                   color_get_blue( _outline_color)/255);
-    shader_reset();
+    shader_pop();
 
     //Run the baking operation
     scribble_font_bake_shader(_source_font_name, _new_font_name, __shd_scribble_bake_outline_8dir_2px,

@@ -73,9 +73,9 @@ game_set_speed(60, gamespeed_fps);
 //gpu_set_zwriteenable(true);//Enables writing to the z-buffer
 //gpu_set_ztestenable(true);//Enables depth testing, so far away things are drawn beind closer things
 //layer_force_draw_depth(true, 0);
-gpu_set_blendmode_ext(bm_one,bm_inv_src_alpha);
+//gpu_set_blendmode_ext(bm_one,bm_inv_src_alpha);
 //gpu_set_blendenable(true);
-shader_set(shd_ui);
+//shader_push(shd_ui);
 application_surface_enable(true);
 application_surface_draw_enable(false);
 window_set_cursor(cr_none);

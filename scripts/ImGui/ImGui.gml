@@ -4740,7 +4740,7 @@ function ImGui() constructor {
         if (ImGui.__ExtFlags & ImGuiExtFlags.RENDERER_GM) {
             buffer_seek(__State.Renderer.CmdBuffer, buffer_seek_start, 0);
             if (buffer_read(__State.Renderer.CmdBuffer, buffer_bool)) { // data->Valid
-            	shader_set(shdImGui);
+            	shader_push(shdImGui);
             	surface_set_target(__State.Renderer.Surface);
             	draw_clear_alpha(0, 0);
             	var list_count = buffer_read(__State.Renderer.CmdBuffer, buffer_u32);
@@ -4783,7 +4783,7 @@ function ImGui() constructor {
             		}
             	}
             	surface_reset_target();
-            	shader_reset();
+            	shader_pop();
 
 				if _ww > 0 and _wh > 0 {
 					display_set_gui_size(_ww, _wh);

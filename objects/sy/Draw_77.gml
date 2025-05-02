@@ -42,12 +42,12 @@ if (surface_exists(surf_ui)) {
             ////print($"{object_index}: {layer_get_depth(layer)}");
 //
 //
-            //shader_set(shd_ui);
+            //shader_push(shd_ui);
             //var _d = gpu_get_depth();
             //gpu_set_depth(depth);
             //event_user(0);
             //gpu_set_depth(_d);
-            //shader_reset();
+            //shader_pop();
         //}
         //gpu_pop_state();
     //}
@@ -55,12 +55,12 @@ if (surface_exists(surf_ui)) {
     //with (GRP_UI) {
         ////print(object_get_name(object_index));
         //gpu_push_state();
-        //shader_set(shd_ui);
+        //shader_push(shd_ui);
         //var _d = gpu_get_depth();
         //gpu_set_depth(depth);
         //event_user(0);
         //gpu_set_depth(_d);
-        //shader_reset();
+        //shader_pop();
         //gpu_pop_state();
     //}
 
@@ -79,12 +79,12 @@ if (surface_exists(surf_ui)) {
     for (var i = 0; i < array_length(_uidraws); i++) {
         gpu_push_state();
         with (_uidraws[i]) {
-            shader_set(shd_ui);
+            shader_push(shd_ui);
             var _d = gpu_get_depth();
             gpu_set_depth(depth/10);
             event_user(0);
             gpu_set_depth(_d);
-            shader_reset();
+            shader_pop();
         }
         gpu_pop_state();
     }
@@ -99,16 +99,16 @@ if (surface_exists(surf_view)) {
     surface_set_target(surf_view);
     var _c = view_camera[0];
     camera_apply(cam_ui);
-    //gpu_set_blendmode(bm_normal);
+    gpu_set_blendmode_ext(bm_one, bm_inv_src_alpha);
     draw_clear_alpha(c_black,0);
-    shader_set(shd_default);
+    shader_push(shd_default);
     for (var i = 0; i < instance_number(obv_3dcam); i++) {
         with (instance_find(obv_3dcam,i)) {
             //print(gpu_get_depth());
             event_user(0);
         }
     }
-    shader_reset();
+    shader_pop();
     camera_apply(_c);
     surface_reset_target();
     gpu_pop_state();
@@ -119,14 +119,15 @@ gpu_push_state();
 surface_set_target(application_surface);
     draw_clear_alpha(c_black,0);
     gpu_set_blendenable(true);
-    shader_set(shd_default);
+    gpu_set_blendmode_ext(bm_one, bm_inv_src_alpha);
+    shader_push(shd_default);
     //gpu_set_depth(0);
     if (surface_exists(surf_view)) draw_surface_stretched(surf_view, 0,0,global.res_width,global.res_height); 
         //gpu_set_blendenable(true);
     
     //gpu_set_colorwriteenable(true,true,true,false);
     if (surface_exists(surf_ui)) draw_surface_stretched(surf_ui, 0,0,global.res_width,global.res_height);
-        shader_reset();
+        shader_pop();
         surface_reset_target();
 
 gpu_pop_state();
@@ -139,7 +140,8 @@ gpu_pop_state();
 gpu_push_state();
 draw_clear_alpha(c_black,1);
 gpu_set_blendenable(true);
-shader_set(shd_default);
+gpu_set_blendmode_ext(bm_one, bm_inv_src_alpha);
+shader_push(shd_default);
 draw_surface_stretched(application_surface, 0,0,global.res_width,global.res_height);
-shader_reset();
+shader_pop();
 gpu_pop_state();

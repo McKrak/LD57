@@ -16,9 +16,10 @@ micro_time = 240;
 micro_type = 0;
 micro_autowin = false;
 micro_song = [undefined,undefined];
+micro_inst = "???";
 
 
-micro_playlist_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microstage00.rpl"));
+micro_playlist_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microstage.rpl"));
 micro_playlist_init = [];
 micro_playlist_len = array_length(micro_playlist_init);
 micro_playlist = array_shuffle(micro_playlist_init);
@@ -37,11 +38,12 @@ seq_micropause_prompt = -1;
 
 init_playlist = function() {
     
-    micro_playlist_init = micro_playlist_file.microlist;
-    micro_playlist_len = array_length(micro_playlist_init) + 1;
-    micro_playlist = array_shuffle(micro_playlist_init);
-    array_push(micro_playlist, micro_playlist_file.boss);
+    //micro_playlist_init = micro_playlist_file.microlist;
+    micro_playlist_len = array_length(micro_playlist_file.microstage00.playlist) + 1;
+    micro_playlist = array_shuffle(micro_playlist_file.microstage00.playlist);
+    array_push(micro_playlist, micro_playlist_file.microstage00.boss[0]);
     playlist_ind = 0;
+    print(micro_playlist);
 }
 
 music = audio_play_sound(snm_nightamb,0,true);
@@ -59,28 +61,28 @@ st_preinit = function() {
 }
 
 st_init = function() {
-    life = life_init;
-    level = 0;
-    micro_result = MGR_UNDECIDED;
-    spd = 1;
-    difficulty = 0;
-    
-    timer_gameover_wait = time_gameover_wait;
-    timer_microwait = time_microwait;
-    timer_microresult = time_microresult;
-    layer_sequence_destroy(seq_microstage);
-    layer_sequence_destroy(seq_micronum);
-    layer_sequence_destroy(seq_microprep);
-    layer_sequence_destroy(seq_microlife);
-    layer_sequence_destroy(seq_results);
-    layer_sequence_destroy(seq_results_fade);
-    if (!layer_sequence_exists(layer, seq_micropause_prompt)) {
-        seq_micropause_prompt = layer_sequence_create(layer, 0,0, sql_pause_prompt);
-    }
-    init_playlist();
-    
     texturegroup_load("microstage00", true);
     if (texturegroup_get_status("microstage00") == texturegroup_status_fetched) || (os_get_config() == "NewConfig1"){
+        life = life_init;
+        level = 0;
+        micro_result = MGR_UNDECIDED;
+        spd = 1;
+        difficulty = 0;
+        
+        timer_gameover_wait = time_gameover_wait;
+        timer_microwait = time_microwait;
+        timer_microresult = time_microresult;
+        layer_sequence_destroy(seq_microstage);
+        layer_sequence_destroy(seq_micronum);
+        layer_sequence_destroy(seq_microprep);
+        layer_sequence_destroy(seq_microlife);
+        layer_sequence_destroy(seq_results);
+        layer_sequence_destroy(seq_results_fade);
+        if (!layer_sequence_exists(layer, seq_micropause_prompt)) {
+            seq_micropause_prompt = layer_sequence_create(layer, 0,0, sql_pause_prompt);
+        }
+        init_playlist();
+        
         seq_microstage = layer_sequence_create(layer,0,0,sqb_microstage);
         var _reslife = asset_get_index($"sql_microstage_life_{life}");
         if (sequence_exists(_reslife)) {
@@ -98,15 +100,14 @@ st_intro = function() {
 
 st_microinit = function() {
     //microgame = ++microgame mod 17;
-    microgame = 18;
+    //microgame = 3;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
     
-    //if (playlist_ind >= micro_playlist_len) {
-        //init_playlist();
-    //}
-    //microgame = micro_playlist[playlist_ind].index;
-    //micro_playstyle = micro_playlist[playlist_ind].cont_type;
-    //playlist_ind++;
+    if (playlist_ind >= micro_playlist_len) {
+        init_playlist();
+    }
+    microgame = micro_playlist[playlist_ind];
+    playlist_ind++;
 
     
     micro_str = microgame_file[microgame].mgid;
@@ -115,6 +116,8 @@ st_microinit = function() {
     micro_type = microgame_file[microgame].type;
     micro_autowin = microgame_file[microgame].autowin;
     micro_song = microgame_file[microgame].track;
+    micro_inst = loc($"microgame_inst.{micro_str}");
+    
     texturegroup_load($"{micro_str}");
     
     state = st_microwait;
@@ -177,7 +180,7 @@ st_microprep = function() {
     }
     if (layer_sequence_get_headpos(seq_microprep) > 30) {
         obv_3dcam.ortho_zoom = 1;
-        room_goto(asset_get_index($"rmz_mg{micro_str}"));
+        room_goto(asset_get_index($"rmz_{micro_str}"));
         layer_sequence_destroy(seq_micropause_prompt);
         layer_sequence_destroy(seq_microstage);
         layer_sequence_destroy(seq_microprep);
@@ -214,7 +217,7 @@ st_microplay = function() {
 
 st_microfinish = function() {
     room_goto(rmz_microstage);
-    texturegroup_unload($"mg{micro_str}");
+    texturegroup_unload($"{micro_str}");
     audio_resume_sound(music);
     state = st_microreturn;
 }

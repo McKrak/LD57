@@ -9,7 +9,7 @@ seq_handshake_intro = layer_sequence_create(layer,0,0,squ_handshake_intro);
 fx_blur = layer_get_fx("EF_BLUR");
 blurlevel = 0;
 if (fx_blur != -1) {
-    fx_set_parameter(fx_blur,"g_RecursiveBlurRadius",0);
+    fx_set_parameter(fx_blur,"g_TwistBlurIntensity",0);
 }
 
 
@@ -25,8 +25,8 @@ st_zoomin = function() {
     obv_3dcam.x = lerp(obv_3dcam.x, 340, .15);
     obv_3dcam.y = lerp(obv_3dcam.y, 280,.15);
     if (fx_blur != -1) {
-        blurlevel = lerp(blurlevel, 16,.1);
-        fx_set_parameter(fx_blur,"g_RecursiveBlurRadius",blurlevel);
+        blurlevel = lerp(blurlevel, .05,.1);
+        fx_set_parameter(fx_blur,"g_TwistBlurIntensity",blurlevel);
     }
     if (obv_3dcam.ortho_zoom > 5.4) {
         state = st_play; 

@@ -1,3 +1,3 @@
 draw_self();
 
-scribble($"[fa_middle][fa_center]{key}").blend(c_black,1).scale(.5).draw(x,y-2);
+scribble($"[fnt_typewriter][fa_middle][fa_center]{key}").blend(c_black,1).scale(.5).z(depth).draw(x,y-2);

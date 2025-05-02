@@ -1,1 +1,2 @@
-shader_reset();
+shader_pop();
+gpu_pop_state();

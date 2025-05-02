@@ -190,7 +190,7 @@ function __scribble_class_element(_string, _unique_id) constructor
             }
         }
         
-        shader_set(__shd_scribble);
+        shader_push(__shd_scribble);
         __set_standard_uniforms(_typist, _function_scope);
         
         //...aaaand set the matrix
@@ -203,7 +203,7 @@ function __scribble_class_element(_string, _unique_id) constructor
         
         //Make sure we reset the world matrix
         matrix_set(matrix_world, _old_matrix);
-        shader_reset();
+        shader_pop();
         
         if (SCRIBBLE_SHOW_WRAP_BOUNDARY) debug_draw_bbox(_x, _y);
         
