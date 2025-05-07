@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scf_axdio",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scf_axdio",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Engine/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

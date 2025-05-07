@@ -23,16 +23,15 @@ if (drawmode) {
 				
 			
 				//var _m = matrix_get(matrix_world); // get current matrix
-  
 			    //var _new_m = matrix_build(_x,_y,0, 24,0,0, 1, 1, 0);
 			    //matrix_set(matrix_world, _new_m);
 				
 				//matrix_set(matrix_world,_m);
-				
-                draw_set_font(fnt_debu);
-                                draw_set_halign(fa_left);
-                                draw_set_valign(fa_top);
-                                draw_text_color(output_xoffset+32,output_yoffset+32,$"x:{x}\ny:{y}\nz:{z}\nxto:{xto}\nyto:{yto}\nzto:{zto}\ncurx:{cursor_x}\ncury:{cursor_y}",c_aqua,c_aqua,c_aqua,c_aqua,1);
+                			
+                //draw_set_font(fnt_debu);
+                //draw_set_halign(fa_left);
+                //draw_set_valign(fa_top);
+                //draw_text_color(output_xoffset+32,output_yoffset+32,$"x:{x}\ny:{y}\nz:{z}\nxto:{xto}\nyto:{yto}\nzto:{zto}\ncurx:{cursor_x}\ncury:{cursor_y}",c_aqua,c_aqua,c_aqua,c_aqua,1);
 			}
 		}
 	}

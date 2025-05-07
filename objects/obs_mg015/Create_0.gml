@@ -14,12 +14,16 @@ st_waiting = function() {
 }
 
 st_calling = function() {
+    if (!audio_is_playing(axf_mg015_ringtone)) {
+        audio_play_sound(axf_mg015_ringtone,0,false);
+    }
     obj_mg015_reject_button.x = lerp(obj_mg015_reject_button.x,obj_mg015_reject_button.initx,.1);
     if (instance_exists(obv_3dcam)) {
         if (collision_point(obv_3dcam.cursor_x,obv_3dcam.cursor_y,obj_mg015_reject_button,false,true)) && (mouse_check_button_pressed(mb_left)) {
             state = st_dragging;
         } else if (collision_point(obv_3dcam.cursor_x,obv_3dcam.cursor_y,obj_mg015_call_button,false,true)) && (mouse_check_button_pressed(mb_left)) {
             state = st_lose;
+            sfx_play(axf_mg015_accept);
             layer_set_visible("Call", false);
             seq_lose = layer_sequence_create("Lose",0,0,sqb_mg015_lose);
         }
@@ -27,11 +31,18 @@ st_calling = function() {
 }
 
 st_dragging = function() {
+    if (!audio_is_playing(axf_mg015_ringtone)) {
+        audio_play_sound(axf_mg015_ringtone,0,false);
+    }
     if (collision_point(obv_3dcam.cursor_x,obv_3dcam.cursor_y,obj_mg015_reject_button,false,true)) && (mouse_check_button(mb_left)) {
         obj_mg015_reject_button.x = clamp(obv_3dcam.cursor_x,obj_mg015_reject_button.initx,obj_mg015_reject_button.targetx);
     } else {
         if (mouse_check_button_released(mb_left)) && (obj_mg015_reject_button.x == obj_mg015_reject_button.targetx) {
             state = st_reject;
+            if (audio_is_playing(axf_mg015_ringtone)) {
+                audio_stop_sound(axf_mg015_ringtone);
+            }
+            sfx_play(axf_mg015_reject);
             result = MGR_WIN;
         } else state = st_calling;
     }

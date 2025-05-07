@@ -15,15 +15,16 @@ switch (type) {
 initx = x;
 
 st_run = function() {
+    if (x == 96) || (x == room_width-96) {
+        dir = !dir;
+    }
     if (dir == 1) {
         move_towards_point(room_width-96,y,spd*sy.dt);
     } else {
         move_towards_point(96,y,spd*sy.dt);
     }
     x = clamp(x,96,room_width-96);
-    if (x == 96) || (x == room_width-96) {
-        dir = !dir;
-    }
+
     if (place_meeting(x,y,obj_mg016_fork)) {
         if (obj_mg016_fork.state = obj_mg016_fork.st_stab) {
             state = st_stabbed;

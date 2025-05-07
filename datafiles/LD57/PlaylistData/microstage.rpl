@@ -1,10 +1,14 @@
 {
     "microstage00": {
-        "playlist": [2,3,4,5,6,8,9,10,11],
-        "boss": [12]
+        "playlist": [2,3,4,5,6,8,9,10,11,13,14,15,16,18,20],
+        "boss": [12],
+        "track": "snm_nightamb",
+        "filter": 8939263
     },
     "microstage01": {
         "playlist": [13,14,15,16,18,19],
-        "boss": [12]
+        "boss": [12],
+        "track": "snm_nightamb2",
+        "filter": 10523
     }
 }

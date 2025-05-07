@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"axf_mg011_snip",
+  "audioGroupId":{
+    "name":"ax_mg011",
+    "path":"audiogroups/ax_mg011",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.18721089,
+  "name":"axf_mg011_snip",
+  "parent":{
+    "name":"AX",
+    "path":"folders/Game/MicroGame/mg011/AX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"axf_mg011_snip.ogg",
+  "type":0,
+  "volume":1.0,
+}

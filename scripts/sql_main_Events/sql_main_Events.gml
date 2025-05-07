@@ -13,9 +13,17 @@ function sql_main_Moment()
         var _seqinst = instance_find(obu_button,i);
         if (instance_exists(_seqinst)) {
             switch i {
-                case 1:
-                    _seqinst.text = loc("topmenu.play")
-                    _seqinst.action = act_play;
+                //case 2:
+                    //_seqinst.text = loc("topmenu.night1")
+                    //_seqinst.action = function() {
+                        //room_goto(rms_microinit_night1);
+                    //}
+                //break;
+                case 1: 
+                    _seqinst.text = loc("topmenu.night1")
+                    _seqinst.action = function() {
+                        room_goto(rms_microinit_night1);
+                    }
                 break;
                 case 0: 
                     _seqinst.text = loc("topmenu.exit")

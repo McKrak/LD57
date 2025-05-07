@@ -8,6 +8,8 @@ if (instance_exists(obs_microsys)) {
         micro_song = obs_microsys.micro_song[0];
         micro_song_n = obs_microsys.micro_song[1];
         autowin = obs_microsys.micro_autowin;
+        cursor_spr = obs_microsys.micro_showcursor ? 0 : 3;
+        nightmare = obs_microsys.micro_nightmare;
     }
 }
 
@@ -17,19 +19,10 @@ won = false;
 starttime = time;
 track = -1;
 playingsound = undefined;
-//if (!nightmare) && (instance_exists(obs_microsys)) {
-    //nightmare = obs_microsys.difficulty;
+
+
+//if (audio_exists(track)) {
+    //playingsound = audio_play_sound(track, 0,is_boss);
 //}
-if (irandom_range(0,9) == 9) {
-    nightmare = true;
-}
-var _trackpath = $"{ROOT_DIR}/StreamData/{micro_song}.ogg";
-if (nightmare) _trackpath = $"{ROOT_DIR}/StreamData/{micro_song_n}.ogg";
-if (file_exists(_trackpath)) {
-    track = audio_create_stream(_trackpath);
-}
-//if (nightmare) && (audio_exists(micro_song_n)) {
-    //playingsound = audio_play_sound(micro_song_n, 0,is_boss);
-//} else if (audio_exists(micro_song)) {
-    playingsound = audio_play_sound(track, 0,is_boss);
+
 //}

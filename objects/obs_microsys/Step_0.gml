@@ -6,10 +6,8 @@ if (layer_sequence_exists(layer, seq_micropause_prompt)) {
 }
 
 if (!pause) {
-    if (!window_has_focus()) {
-        pause = true;
-    }
-    audio_resume_sound(music);
+    state();
+
     if (layer_sequence_exists("SYS", seq_microprep)) {
         if (layer_sequence_is_paused(seq_microprep)) {
             layer_sequence_play(seq_microprep);
@@ -36,16 +34,14 @@ if (!pause) {
             obu_cursor.image_index = obs_microgame.cursor_spr;
         } else obu_cursor.image_index = 0;
     }
-    if (!window_mouse_get_locked()) window_mouse_set_locked(true);
         
-    if (keyboard_check_pressed(vk_enter)) {
+    if ((keyboard_check_pressed(vk_enter)) || (!window_has_focus())) && (pausable) {
+        if (window_mouse_get_locked()) window_mouse_set_locked(false);
         pause = !pause;
+        audio_pause_sound(music);
+        if (audio_exists(music_track)) audio_pause_sound(music_track);
     }
-    
-    state();
-    
 } else {
-    audio_pause_sound(music);
     if (layer_sequence_exists("SYS", seq_microprep)) {
         if (!layer_sequence_is_paused(seq_microprep)) {
             layer_sequence_pause(seq_microprep);
@@ -80,12 +76,13 @@ if (!pause) {
         if (layer_sequence_is_finished(seq_micropause_exit)) {
             layer_sequence_destroy(seq_micropause_exit);
             pause = false;
+            if (!window_mouse_get_locked()) window_mouse_set_locked(true);
+            if (room == rmz_microstage) audio_resume_sound(music)
+                if (audio_exists(music_track)) audio_resume_sound(music_track);
         }
     }
     
     if (instance_exists(obu_cursor)) {
         obu_cursor.image_index = 0;
     }
-    
-    if (window_mouse_get_locked()) window_mouse_set_locked(false);
 }

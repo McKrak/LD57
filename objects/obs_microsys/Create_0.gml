@@ -1,5 +1,6 @@
 load_microstage = -1;
 pause = false;
+pausable = false;
 
 level = 0;
 life_init = 4;
@@ -17,6 +18,8 @@ micro_type = 0;
 micro_autowin = false;
 micro_song = [undefined,undefined];
 micro_inst = "???";
+micro_nightmare = false;
+micro_showcursor = true;
 
 
 micro_playlist_file = json_parse(file_read_all_text($"{ROOT_DIR}/PlaylistData/microstage.rpl"));
@@ -39,14 +42,23 @@ seq_micropause_prompt = -1;
 init_playlist = function() {
     
     //micro_playlist_init = micro_playlist_file.microlist;
-    micro_playlist_len = array_length(micro_playlist_file.microstage00.playlist) + 1;
-    micro_playlist = array_shuffle(micro_playlist_file.microstage00.playlist);
-    array_push(micro_playlist, micro_playlist_file.microstage00.boss[0]);
+    var _stagenoform = format_int(stage,2,0);
+    micro_playlist_len = array_length(micro_playlist_file[$ $"microstage{_stagenoform}"].playlist) + 1;
+    micro_playlist = array_shuffle(micro_playlist_file[$ $"microstage{_stagenoform}"].playlist);
+    array_push(micro_playlist, micro_playlist_file[$ $"microstage{_stagenoform}"].boss[0]);
     playlist_ind = 0;
     print(micro_playlist);
 }
 
-music = audio_play_sound(snm_nightamb,0,true);
+music = -1;
+var _stagenoform = format_int(stage,2,0);
+var _trackpath = $"{ROOT_DIR}/StreamData/{micro_playlist_file[$ $"microstage{_stagenoform}"].track}.ogg";
+if (file_exists(_trackpath)) {
+    music = audio_create_stream(_trackpath);
+    audio_play_sound(music,0,true);
+}
+track = -1;
+music_track = -1;
 
 time_microwait = 60;
 timer_microwait = time_microwait;
@@ -89,25 +101,37 @@ st_init = function() {
             seq_micronum = layer_sequence_create(layer,0,0,sql_microstage_num);
             seq_microlife = layer_sequence_create(layer, 0, 0, _reslife);
         }
+        
+        var _fx = layer_get_fx("FX_COLOR");
+        var _stagenoform = format_int(stage,2,0);
+        var _bgcol = micro_playlist_file[$ $"microstage{_stagenoform}"].filter;
+        fx_set_parameter(_fx,"g_TintCol", [color_get_blue(_bgcol)/255,color_get_green(_bgcol)/255,color_get_red(_bgcol)/255,1]);
+        //
+        //audio_play_sound(snm_nightamb,0,true);
+        //
         state = st_intro;
     }
 }
 
 st_intro = function() {
-    
     state = st_microinit;
+    pausable = true;
+    window_mouse_set_locked(true);
 }
 
 st_microinit = function() {
+    if (audio_exists(music_track)) audio_stop_sound(music_track);
+        if (audio_exists(track)) audio_destroy_stream(track);
+    
     //microgame = ++microgame mod 17;
-    microgame = 10;
+    //microgame = 13;
     //microgame = choose(1,2,3,4,5,6,7,8,9,10,11);
     
-    //if (playlist_ind >= micro_playlist_len) {
-        //init_playlist();
-    //}
-    //microgame = micro_playlist[playlist_ind];
-    //playlist_ind++;
+    if (playlist_ind >= micro_playlist_len) {
+        init_playlist();
+    }
+    microgame = micro_playlist[playlist_ind];
+    playlist_ind++;
 
     
     micro_str = microgame_file[microgame].mgid;
@@ -116,10 +140,37 @@ st_microinit = function() {
     micro_type = microgame_file[microgame].type;
     micro_autowin = microgame_file[microgame].autowin;
     micro_song = microgame_file[microgame].track;
-    micro_inst = loc($"microgame_inst.{micro_str}");
+    micro_showcursor = microgame_file[microgame].show_cursor;
+    switch (micro_type) {
+        case 0:
+            micro_nightmare = false; break;
+        case 1: 
+            if (!irandom_range(0,7)) {
+                micro_nightmare = true;
+            } else {
+                micro_nightmare = false;
+            }
+            break;
+        case 2: micro_nightmare = true; break;
+        case 3: micro_nightmare = false; break;
+    }
+    var _trackpath = $"{ROOT_DIR}/StreamData/{micro_song[0]}.ogg";
+    if (micro_nightmare) && (micro_song[1] != undefined) _trackpath = $"{ROOT_DIR}/StreamData/{micro_song[1]}.ogg";
+    if (file_exists(_trackpath)) {
+        track = audio_create_stream(_trackpath);
+    }
+    if (micro_nightmare) {
+        micro_inst = loc($"microgame_inst.{micro_str}n");
+        if (micro_inst == "undefined") {
+            micro_inst = loc($"microgame_inst.{micro_str}");
+        }
+    } else {
+        micro_inst = loc($"microgame_inst.{micro_str}");
+    }
+    
     
     texturegroup_load($"{micro_str}");
-    //audio_group_load(ax_mg010)
+    audiogroup_load($"ax_{micro_str}");
     
     state = st_microwait;
 }
@@ -202,12 +253,21 @@ st_microstart = function() {
 }
 
 st_microplay = function() {
+    if (!layer_sequence_exists(layer, seq_micropause_prompt)) {
+        seq_micropause_prompt = layer_sequence_create(layer, 0,0, sql_pause_prompt);
+    }
     if (layer_sequence_exists("SYS",seq_microprep)) {
         if (layer_sequence_is_finished(seq_microprep)) {
             layer_sequence_destroy(seq_microprep);
         }  
+    }if (audio_is_playing(music)) {
+        audio_pause_sound(music);
     }
-    audio_pause_sound(music);
+    if (!audio_exists(music_track) && (audio_exists(track))) {
+        music_track = audio_play_sound(track, 0, micro_type == 2 ? 1 : 0);
+    } else if (audio_exists(music_track)) && (audio_is_paused(music_track)) {
+        audio_resume_sound(music_track);
+    }
     
     //timer_microgame -= 1*sy.dt;
     //if (timer_microgame < 0) {
@@ -219,13 +279,16 @@ st_microplay = function() {
 st_microfinish = function() {
     room_goto(rmz_microstage);
     texturegroup_unload($"{micro_str}");
+    audiogroup_unload($"ax_{micro_str}");
     audio_resume_sound(music);
     state = st_microreturn;
 }
 
 
 st_gameover_lose = function() {
-    pause = false;
+    if (audio_exists(music_track)) audio_stop_sound(music_track);
+    if (audio_exists(track)) audio_destroy_stream(track);
+    pausable = false;
     if (layer_sequence_exists(layer,seq_micropause_prompt)) {
         layer_sequence_destroy(seq_micropause_prompt);
     }
@@ -238,7 +301,6 @@ st_gameover_lose = function() {
 }
 
 st_gameover_results_fade = function() {
-    pause = false;
     if (layer_sequence_is_finished(seq_results_fade)) {
         seq_results = layer_sequence_create("UI_TOP",0,0,sql_microstage_result);
         state = st_gameover_results_menu_init;
@@ -246,15 +308,14 @@ st_gameover_results_fade = function() {
 }
 
 st_gameover_results_menu_init = function() {
-    pause = false;
     if (layer_sequence_exists("UI_TOP", seq_results)) {
         state = st_gameover_results;
+        window_mouse_set_locked(false);
     }
 }
 
 st_gameover_results = function() {
-    pause = false;
-    window_mouse_set_locked(false);
+
 }
 
 act_restart = function() {

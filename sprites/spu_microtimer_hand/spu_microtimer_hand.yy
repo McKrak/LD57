@@ -28,7 +28,7 @@
     "name":"microtimer",
     "path":"folders/Game/MicroGame/Common/microtimer.yy",
   },
-  "preMultiplyAlpha":false,
+  "preMultiplyAlpha":true,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{

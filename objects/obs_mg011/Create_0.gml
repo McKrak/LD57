@@ -32,6 +32,7 @@ layer_sequence_speedscale(seq_scissors, spd/*+(1.25*nightmare)*/);
 st_idle = function() {
     if (mouse_check_button_pressed(mb_left)) {
         if (instance_exists(obj_mg011_scissors)) {
+            sfx_play(axf_mg011_snip);
             var _inst = collision_point(obj_mg011_scissors.x,obj_mg011_scissors.y,obj_mg011_leaf,false,true)
             if (instance_exists(_inst)) {
                 _inst.state = _inst.st_cut;

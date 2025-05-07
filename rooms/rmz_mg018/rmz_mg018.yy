@@ -6,9 +6,9 @@
   "inheritCreationOrder":true,
   "inheritLayers":false,
   "instanceCreationOrder":[
+    {"name":"inst_A534E71","path":"rooms/rmz_mg018/rmz_mg018.yy",},
     {"name":"inst_62EC4E9B","path":"rooms/rmz_mg018/rmz_mg018.yy",},
     {"name":"inst_4EFF56D","path":"rooms/rmz_mg018/rmz_mg018.yy",},
-    {"name":"inst_A534E71","path":"rooms/rmz_mg018/rmz_mg018.yy",},
     {"name":"inst_233760FA_2_1_1_1_1","path":"rooms/rmz_mg018/rmz_mg018.yy",},
   ],
   "isDnd":false,

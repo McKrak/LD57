@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scs_config",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Engine.yy",
+    "name":"Scripts",
+    "path":"folders/Engine/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

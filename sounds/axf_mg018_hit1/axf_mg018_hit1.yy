@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"axf_mg018_hit1",
+  "audioGroupId":{
+    "name":"ax_mg018",
+    "path":"audiogroups/ax_mg018",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":1.8461452,
+  "name":"axf_mg018_hit1",
+  "parent":{
+    "name":"AX",
+    "path":"folders/Game/MicroGame/mg018/AX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"axf_mg018_hit1.ogg",
+  "type":0,
+  "volume":1.0,
+}

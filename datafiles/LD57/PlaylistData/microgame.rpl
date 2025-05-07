@@ -8,18 +8,20 @@
             null
         ],
         "type": 0,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": true
     },
     {
         "mgid": "mg001",
         "time": 240,
         "autowin": false,
         "track": [
-            null,
+            "snm_cosmos",
             null
         ],
         "type": 0,
-        "cont_type": 1
+        "cont_type": 1,
+        "show_cursor": false
     },
     {
         "mgid": "mg002",
@@ -30,7 +32,8 @@
             null
         ],
         "type": 1,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": true
     },
     {
         "mgid": "mg003",
@@ -41,7 +44,8 @@
             "snm_soul_n"
         ],
         "type": 1,
-        "cont_type": 2
+        "cont_type": 2,
+        "show_cursor": false
     },
     {
         "mgid": "mg004",
@@ -52,7 +56,8 @@
             null
         ],
         "type": 0,
-        "cont_type": 2
+        "cont_type": 2,
+        "show_cursor": false
     },
     {
         "mgid": "mg005",
@@ -63,7 +68,8 @@
             null
         ],
         "type": 0,
-        "cont_type": 1
+        "cont_type": 1,
+        "show_cursor": true
     },
     {
         "mgid": "mg006",
@@ -74,7 +80,8 @@
             null
         ],
         "type": 0,
-        "cont_type": 2
+        "cont_type": 2,
+        "show_cursor": false
     },
     {
         "mgid": "mg007",
@@ -85,7 +92,8 @@
             "snm_soul_n"
         ],
         "type": 1,
-        "cont_type": 2
+        "cont_type": 2,
+        "show_cursor": true
     },
     {
         "mgid": "mg008",
@@ -96,7 +104,8 @@
             null
         ],
         "type": 0,
-        "cont_type": 1
+        "cont_type": 1,
+        "show_cursor": true
     },
     {
         "mgid": "mg009",
@@ -107,7 +116,8 @@
             null
         ],
         "type": 0,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": true
     },
     {
         "mgid": "mg010",
@@ -118,7 +128,8 @@
             "snm_soul_n"
         ],
         "type": 1,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": true
     },
     {
         "mgid": "mg011",
@@ -129,7 +140,8 @@
             "snm_trim_n"
         ],
         "type": 1,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": false
     },
     {
         "mgid": "mg012",
@@ -140,29 +152,32 @@
             null
         ],
         "type": 3,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": false
     },
     {
         "mgid": "mg013",
         "time": 240,
         "autowin": true,
         "track": [
-            null,
-            null
+            "snm_soul",
+            "snm_soul_n"
         ],
         "type": 1,
-        "cont_type": 2
+        "cont_type": 2,
+        "show_cursor": false
     },
     {
         "mgid": "mg014",
-        "time": 240,
+        "time": 480,
         "autowin": true,
         "track": [
             null,
             null
         ],
-        "type": 1,
-        "cont_type": 0
+        "type": 0,
+        "cont_type": 0,
+        "show_cursor": false
     },
     {
         "mgid": "mg015",
@@ -173,18 +188,20 @@
             null
         ],
         "type": 2,
-        "cont_type": 1
+        "cont_type": 1,
+        "show_cursor": true
     },
     {
         "mgid": "mg016",
         "time": 240,
         "autowin": false,
         "track": [
-            null,
+            "snm_trim",
             null
         ],
         "type": 0,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": false
     },
     {
         "mgid": "mg017",
@@ -195,7 +212,8 @@
             null
         ],
         "type": 0,
-        "cont_type": 1
+        "cont_type": 1,
+        "show_cursor": true
     },
     {
         "mgid": "mg018",
@@ -206,7 +224,8 @@
             null
         ],
         "type": 1,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": true
     },
     {
         "mgid": "mg019",
@@ -217,17 +236,19 @@
             null
         ],
         "type": 0,
-        "cont_type": 1
+        "cont_type": 1,
+        "show_cursor": true
     },
     {
         "mgid": "mg020",
         "time": 240,
         "autowin": false,
         "track": [
-            null,
+            "snm_pcof",
             null
         ],
         "type": 0,
-        "cont_type": 0
+        "cont_type": 0,
+        "show_cursor": false
     }
 ]

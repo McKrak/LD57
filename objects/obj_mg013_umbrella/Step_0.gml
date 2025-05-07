@@ -5,7 +5,7 @@ if (instance_exists(obs_microsys)) {
                 image_alpha = lerp(image_alpha, 0.5, 0.1);
                 solid = false;
             } else {
-                x = clamp(x + window_mouse_get_delta_x()/2, 0, room_width);
+                phy_position_x = clamp(x + window_mouse_get_delta_x()/2, 0, room_width);
             }
         }
     }

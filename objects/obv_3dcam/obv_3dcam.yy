@@ -65,7 +65,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Sprite98",
+    "path":"sprites/Sprite98/Sprite98.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

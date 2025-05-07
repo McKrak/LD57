@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scf_shaderstack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scf_shaderstack",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Engine/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

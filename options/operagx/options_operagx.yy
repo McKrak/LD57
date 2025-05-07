@@ -1,11 +1,7 @@
 {
   "$GMOperaGXOptions":"",
   "%Name":"operagx",
-  "ConfigValues":{
-    "NewConfig1":{
-      "option_operagx_game_name":"Rapid Eye Microgames",
-    },
-  },
+  "ConfigValues":{},
   "name":"operagx",
   "option_operagx_display_cursor":false,
   "option_operagx_editUrl":"",

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"axf_mg020_box1",
+  "audioGroupId":{
+    "name":"ax_mg020",
+    "path":"audiogroups/ax_mg020",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":1.1384127,
+  "name":"axf_mg020_box1",
+  "parent":{
+    "name":"AX",
+    "path":"folders/Game/MicroGame/mg020/AX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"axf_mg020_box1.ogg",
+  "type":0,
+  "volume":1.0,
+}

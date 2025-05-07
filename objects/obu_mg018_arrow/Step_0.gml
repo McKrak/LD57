@@ -7,6 +7,7 @@ if (instance_exists(obs_microsys) && (instance_exists(obu_cursor)) && (instance_
                 array_push(obs_mg018.monke_pattern, type);
                 if (instance_exists(obj_mg018_monke)) {
                     if (array_last(obs_mg018.monke_pattern) != (obs_mg018.cat_pattern[array_length(obs_mg018.monke_pattern)-1])) {
+                        sfx_play(axf_mg018_lose);
                         if (obs_mg018.result == MGR_UNDECIDED) {
                             obs_mg018.result = MGR_LOSE;
                             obs_mg018.state = obs_mg018.st_lose;
@@ -14,13 +15,17 @@ if (instance_exists(obs_microsys) && (instance_exists(obu_cursor)) && (instance_
                                 layer_sequence_destroy(obs_mg018.seq_arrow);
                             }
                         }
-                        obj_mg018_monke.sprite_index = spr_mg018_monke_lose;
+                        if (!obs_microgame.nightmare) {
+                            obj_mg018_monke.sprite_index = spr_mg018_monke_lose;
+                        } else obj_mg018_monke.sprite_index = spr_mg018_monke_losen;
                         obj_mg018_monke.image_index = 0;
                         if (instance_exists(obj_mg018_cat)) {
-                            obj_mg018_cat.sprite_index = spr_mg018_cat_lose;
+                            if (!obs_microgame.nightmare) obj_mg018_cat.sprite_index = spr_mg018_cat_lose;
+                                else obj_mg018_cat.sprite_index = spr_mg018_cat_losen;
                             obj_mg018_cat.image_index = 0;
                         }
                     } else if (array_length(obs_mg018.monke_pattern) == array_length(obs_mg018.cat_pattern)) {
+                        sfx_play(axf_mg018_hit4);
                         if (obs_mg018.result == MGR_UNDECIDED) {
                             obs_mg018.result = MGR_WIN;
                             obs_mg018.state = obs_mg018.st_win;
@@ -31,10 +36,12 @@ if (instance_exists(obs_microsys) && (instance_exists(obu_cursor)) && (instance_
                         obj_mg018_monke.sprite_index = spr_mg018_monke_move;
                         obj_mg018_monke.image_index = type;
                         if (instance_exists(obj_mg018_cat)) {
-                            obj_mg018_cat.sprite_index = spr_mg018_cat_move;
+                            if (!obs_microgame.nightmare) obj_mg018_cat.sprite_index = spr_mg018_cat_move;
+                                else obj_mg018_cat.sprite_index = spr_mg018_cat_moven;
                             obj_mg018_cat.image_index = type;
                         }
                     } else {
+                        sfx_play(asset_get_index($"axf_mg018_hit{type}"));
                         obj_mg018_monke.sprite_index = spr_mg018_monke_move;
                         obj_mg018_monke.image_index = type;
                     }

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_language",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/GlobalRes/Scripts.yy",
+    "name":"ScriptsOld",
+    "path":"folders/Engine/ScriptsOld.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

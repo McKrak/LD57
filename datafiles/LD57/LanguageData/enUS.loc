@@ -22,14 +22,18 @@
         "mg017": "Fill the shapes!",
         "mg018": "Remember!",
         "mg018sub": "Copy the moves!",
-        "mg019": "Cut!"
+        "mg018nsub": "DON'T copy the moves!",
+        "mg019": "Cut!",
+        "mg020": "Throw on green!"
     },
     "topmenu": {
         "lifemode": "Dream Dash",
         "timemode": "Speedy Sleep",
         "freeplay": "Free Snooze",
-        "exit": "Wake Up (Quit)",
-        "play": "Go to Sleep (Play)"
+        "exit": "Get Out Of Bed",
+        "play": "Go to Sleep (Play)",
+        "night1": "Go to Sleep",
+        "night2": "Play Night 2"
     },
     "results": {
         "retry": "Snooze",

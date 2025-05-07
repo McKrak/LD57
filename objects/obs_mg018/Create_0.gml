@@ -9,6 +9,8 @@ ele_arrow_r = noone;
 ele_arrow_d = noone;
 inst_arrow_last = noone;
 
+cat_moves = 4;
+if (nightmare) cat_moves = 6;
 cat_move = 0;
 cat_pattern = [];
 monke_pattern = [];
@@ -28,7 +30,7 @@ st_wait = function() {
 
 
 st_cats_turn = function() {
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < cat_moves; i++) {
         array_push(cat_pattern,irandom_range(0,3));
     }
     if (!layer_sequence_exists("UI",seq_arrow)) {
@@ -43,21 +45,24 @@ st_cat_move = function() {
     timer_cat_move-=1*sy.dt;
     if (timer_cat_move < 0) {
         f_hmove_cat = 0;
-        timer_cat_move = time_cat_move;
+        timer_cat_move = nightmare? 30 : time_cat_move;
         if (cat_move < array_length(cat_pattern)) { 
             var _move = cat_pattern[cat_move];
+            sfx_play(asset_get_index($"axf_mg018_hit{_move}"));
             inst_arrow_last = instance_find(obu_mg018_arrow,_move);
             if (instance_exists(inst_arrow_last)) {
                 inst_arrow_last.image_index = 1;
             }
             if (instance_exists(obj_mg018_cat)) {
-                obj_mg018_cat.sprite_index = spr_mg018_cat_move;
+                if (!nightmare) obj_mg018_cat.sprite_index = spr_mg018_cat_move;
+                    else obj_mg018_cat.sprite_index = spr_mg018_cat_moven;
                 obj_mg018_cat.image_index = _move;
             }
         } else {
             layer_sequence_destroy(seq_arrow);
             if (instance_exists(obj_mg018_cat)) {
-                obj_mg018_cat.sprite_index = spr_mg018_cat_idle;
+                if (!nightmare) obj_mg018_cat.sprite_index = spr_mg018_cat_idle;
+                    else obj_mg018_cat.sprite_index = spr_mg018_cat_idlen;
                 obj_mg018_cat.image_index = 0;
             }
             if (!layer_sequence_exists("SYS", seq_announce)) {
@@ -72,7 +77,8 @@ st_cat_move = function() {
             inst_arrow_last = noone;
         }
         if (instance_exists(obj_mg018_cat)) {
-            obj_mg018_cat.sprite_index = spr_mg018_cat_idle;
+            if (!nightmare) obj_mg018_cat.sprite_index = spr_mg018_cat_move;
+                else obj_mg018_cat.sprite_index = spr_mg018_cat_moven;
             obj_mg018_cat.image_index = 0;
         }
     }
